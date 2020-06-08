@@ -19,7 +19,10 @@ def about(request):
         return HttpResponse(status=500)
 
 def resume(request):
-    pass
+    if request.method == "GET":
+        return render(request, "chucksite/resume.html", {})
+    else:
+        return HttpResponse(status=500)
 
 def projects(request):
     pass
