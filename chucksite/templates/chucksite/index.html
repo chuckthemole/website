@@ -1,0 +1,30 @@
+
+{% extends "chucksite/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div style="margin: auto" class="tile is-8 is-parent">
+  <div class="tile is-child box">
+
+    <p>
+      <div class="grid-cont">
+        <div>
+          <img class="rounds imgShake" src="{% static 'chucksite/images/ChuckSchoolPic.JPG' %}" alt=" icon">
+        </div>
+        <div >
+          <p class="hello">
+            Hello, my name is
+          </p>
+          <p class="charles">
+            Charles Thomas.
+          </p>
+        </div>
+      </div>
+    </p>
+
+  </div>
+</div>
+
+{% endblock content %}
