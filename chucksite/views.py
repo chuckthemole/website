@@ -13,7 +13,10 @@ def index(request):
         return HttpResponse(status=500)
 
 def about(request):
-    pass
+    if request.method == "GET":
+        return render(request, "chucksite/about.html", {})
+    else:
+        return HttpResponse(status=500)
 
 def resume(request):
     pass

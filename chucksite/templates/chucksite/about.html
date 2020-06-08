@@ -1,0 +1,38 @@
+
+{% extends "chucksite/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<head><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></head>
+
+<!--This is my about me-->
+<div style="margin: auto" class="tile is-8 is-parent">
+  <div class="tile is-child box">
+
+    <p>
+      <div class="grid-cont">
+        <div>
+          <img class="rounds imgShake" src="{% static 'chucksite/images/ChuckSchoolPic.JPG' %}" alt=" icon">
+        </div>
+        <div >
+          <p class="hello">
+            Hello, my name is
+          </p>
+          <p class="charles">
+            Charles Thomas.
+          </p>
+          <p class='about w3-animate-bottom'>
+            I'm a student in Oakland, California<br>
+            currently pursuing my Master's in<br>
+            Interdisciplinary Computer Science at <br>
+            Mills College.
+          </p>
+        </div>
+      </div>
+    </p>
+  </div>
+</div>
+
+{% endblock content %}
