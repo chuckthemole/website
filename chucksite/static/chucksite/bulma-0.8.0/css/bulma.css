@@ -1,4 +1,6 @@
 /*Added CSS code Charles Thomas*/
+/*******Ctr F5 for refresh******/
+
 .charles {
   font-family: helvetica;
   color: #da7fec;
@@ -9,11 +11,27 @@
   position: relative;
 }
 
+.body {
+  height: 100%;
+  width: 100%;
+  background-color:red;
+}
+
 .hello {
   font-family: helvetica;
   color: #e8adf4;
   text-align: left;
   font-size: 40px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
+.about {
+  font-family: helvetica;
+  color: #cc00cc;
+  text-align: left;
+  font-size: 20px;
   grid-row-start: 1;
   grid-row-end: 1;
   position: relative;
@@ -53,6 +71,39 @@
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
   padding: 10px;
+}
+
+.headerButton {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.headerButton:link, .headerButton:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.headerButton:hover, .headerButton:active {
+  background-color: blue;
+}
+
+.resume {
+  height: 50%;
+  width: 50%;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 150px;
+  align-items: center;
 }
 
 /***********Beginning of Bulma***************/

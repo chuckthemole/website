@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color:#fce8ee">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,31 @@
 
 <body>
 
+<script>
+function about() {
+  document.getElementById("about").innerHTML = "I'm a student in Oakland, California<br>" +
+  "currently pursuing my Master's in<br>Interdisciplinary Computer Science at <br>" +
+  "Mills College. My anticipated graduation <br>date is December of 2020.";
+}
+</script>
+
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="background-color:#9AE1EF">
 
     <!---->
     <div class="navbar-brand">
-      <a class="navbar-item" href="{% url 'chucksite:index' %}">Home</a>
-      <a class="navbar-item" href="{% url 'chucksite:about' %}">About</a>
-      <a class="navbar-item" href="{% url 'chucksite:resume' %}">Resume</a>
-      <a class="navbar-item" href="{% url 'chucksite:projects' %}">Projects</a>
+      <div class="navbar-item">
+        <a class="headerButton" href="{% url 'chucksite:index' %}">Home</a>
+      </div>
+      <div class="navbar-item">
+        <a class="headerButton" onclick="about()">About</a>
+      </div>
+      <!--<a class="navbar-item" href="{% url 'chucksite:about' %}">About</a>-->
+      <div class="navbar-item">
+        <a class="headerButton" href="{% url 'chucksite:resume' %}">Resume</a>
+      </div>
+      <div class="navbar-item">
+        <a class="headerButton" href="{% url 'chucksite:projects' %}">Projects</a>
+      </div>
 
       <!--   https://bulma.io/documentation/components/navbar/  for responsive sites -->
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarData">
@@ -45,15 +62,22 @@
 
     <div class="navbar-end">
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-item" href="{% url 'chucksite:index' %}">More items later</a>
-        <a class="navbar-item"> More items later </a>
+        <div class="navbar-item">
+          <a class="headerButton" href="{% url 'chucksite:index' %}">More items later</a>
+        </div>
+        <div class="navbar-item">
+          <a class="headerButton"> More items later </a>
+        </div>
       </div>
     </div>
+
   </nav>
 
-  <section class="section" style="background-color:red">
+  <section class="section">
     <div class="container">
+      <div>
         {% block content %}{% endblock content %}
+      </div>
     </div>
   </section>
 

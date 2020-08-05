@@ -4,11 +4,18 @@
 
 {% load static %}
 
-<!--This is my resume-->
-<p class="resume" style=
-  "font-family: veranda;
-  text-align: center;">
-  <img src="{% static 'chucksite/images/CharlesThomasResume2020.JPG' %}" alt=" icon">
-</p>
+<div style="margin: auto" class="tile is-8 is-parent">
+  <div class="tile is-child box" style="background-color:#fce8fa">
+    <p>
+      <div class="grid-cont" style="background-color:pink">
+
+          <p>
+            <img src="{% static 'chucksite/images/CharlesThomasResume2020.JPG' %}" alt=" icon">
+          </p>
+
+      </div>
+    </p>
+  </div>
+</div>
 
 {% endblock content %}

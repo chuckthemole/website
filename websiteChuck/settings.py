@@ -25,6 +25,21 @@ SECRET_KEY = '7&g(ge%+2c$h=2@r(v+m&1kn5pxbb^h#ltup_!m^3klma)8(yj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEST_MEMCACHE = False
+if not DEBUG or TEST_MEMCACHE:
+    CACHES = {
+        'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        }
+    }
+else:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        }
+}
+
 ALLOWED_HOSTS = []
 
 
