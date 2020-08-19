@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'chucksite/bulma-0.8.0/css/bulma.css' %}"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'chucksite/main.css' %}"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -78,6 +79,12 @@ function about() {
     <div class="container">
       <div>
         {% block content %}{% endblock content %}
+
+        <h2 class = "footer" style="background-color:#fce8ee">
+            <a class="iconContainer" href="https://www.linkedin.com/in/chuckthemole/"><i class="fab fa-linkedin"></i></a>
+            <a class="iconContainer" href="https://github.com/chuckthemole"><i class='fab fa-github-square'></i></a>
+        </h2>
+
       </div>
     </div>
   </section>
