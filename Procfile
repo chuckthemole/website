@@ -1,0 +1,1 @@
+web: gunicorn chucksite.wsgi
