@@ -34,7 +34,10 @@ def projects(request):
 
 def klotski(filename):
     os.popen("java -jar chucksite/static/chucksite/projects/klotski.jar")
-    return 0
+    if request.method == "GET":
+        return render(request, "chucksite/projects.html", {})
+    else:
+        return HttpResponse(status=500)
 
 #Not using now
 def download(request, path):
