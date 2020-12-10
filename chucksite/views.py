@@ -32,9 +32,12 @@ def projects(request):
     else:
         return HttpResponse(status=500)
 
-def klotski(filename):
+def klotski(request):
     os.system("java -jar chucksite/static/chucksite/projects/klotski.jar")
-    return render(request, "chucksite/projects.html", {})
+    if request.method == "GET":
+        return render(request, "chucksite/projects.html", {})
+    else:
+        return HttpResponse(status=500)
 
 #Not using now
 def download(request, path):
