@@ -32,6 +32,10 @@ def projects(request):
     else:
         return HttpResponse(status=500)
 
+def klotski(filename):
+    os.popen("java -jar chucksite/static/chucksite/projects/klotski.jar")
+    return 0
+
 #Not using now
 def download(request, path):
     file_path = os.path.join(settings.MEDIA_ROOT, path)
