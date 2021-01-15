@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 #from chucksite.models import Script
 import os
+import subprocess
 from django.conf import settings
 
 # Create your views here.
@@ -42,3 +43,11 @@ def download(request, path):
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
             return response
     raise Http404
+
+def klotski(request):
+    subprocess.call(['java', '-jar', 'chucksite/static/chucksite/projects/klotski.JAR'])
+    #os.system("java -jar " + klotski)
+    if request.method == "GET":
+        return render(request, "chucksite/projects.html", {})
+    else:
+        return HttpResponse(status=500)
