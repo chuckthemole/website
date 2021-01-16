@@ -45,7 +45,8 @@ def download(request, path):
     raise Http404
 
 def klotski(request):
-    subprocess.call(['java', '-jar', 'chucksite/static/chucksite/projects/klotski.JAR'])
+    os.popen('sh chucksite/static/chucksite/projects/klotski.sh')
+    #subprocess.call(['java', '-jar', 'chucksite/static/chucksite/projects/klotski.JAR'])
     #os.system("java -jar " + klotski)
     if request.method == "GET":
         return render(request, "chucksite/projects.html", {})
