@@ -32,8 +32,6 @@ def projects(request):
     else:
         return HttpResponse(status=500)
 
-
-#Not using now
 def download(request, path):
     file_path = os.path.join(settings.MEDIA_ROOT, path)
     if os.path.exists(file_path):
