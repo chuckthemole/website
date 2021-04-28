@@ -6,6 +6,28 @@
   background-color: #0a0c97;
 }
 
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.my-footer {
+  font-family: helvetica;
+  color: #da7fec;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+  border-style: dotted;
+  border-color: #e8adf4;
+}
+
+.my-footer:hover {
+  color: #e8adf4;
+  border-color: #da7fec;
+}
+
 .sidebar {
   position: -webkit-sticky;
   position: sticky;
@@ -14,6 +36,21 @@
   height: 25vh;
   padding: 40px;
   padding-top: 80px;
+}
+
+.title {
+  font-family: helvetica;
+  color: #da7fec;
+  text-align: left;
+  font-size: 50px;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+}
+
+.is-section {
+  padding-top: 70px;
+  padding-left: 100px;
 }
 
 .main {
