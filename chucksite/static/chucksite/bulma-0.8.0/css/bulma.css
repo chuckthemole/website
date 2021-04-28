@@ -6661,7 +6661,7 @@ a.list-item {
 .navbar.is-primary .navbar-brand .navbar-link:hover,
 .navbar.is-primary .navbar-brand .navbar-link.is-active {
   background-color: #A9EAF7; /*#00b89c;*/
-  color: #fff;
+  color: #e8adf4;
 }
 
 .navbar.is-primary .navbar-brand .navbar-link::after {
@@ -6690,7 +6690,7 @@ a.list-item {
   .navbar.is-primary .navbar-end .navbar-link:hover,
   .navbar.is-primary .navbar-end .navbar-link.is-active {
     background-color: #A9EAF7; /*#00b89c;*/
-    color: #fff;
+    color: #e8adf4;
   }
   .navbar.is-primary .navbar-start .navbar-link::after,
   .navbar.is-primary .navbar-end .navbar-link::after {
@@ -6723,7 +6723,7 @@ a.list-item {
 .navbar.is-link .navbar-brand .navbar-link:hover,
 .navbar.is-link .navbar-brand .navbar-link.is-active {
   background-color: #2366d1;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .navbar.is-link .navbar-brand .navbar-link::after {
@@ -6752,7 +6752,7 @@ a.list-item {
   .navbar.is-link .navbar-end .navbar-link:hover,
   .navbar.is-link .navbar-end .navbar-link.is-active {
     background-color: #2366d1;
-    color: #fff;
+    color: #e8adf4;
   }
   .navbar.is-link .navbar-start .navbar-link::after,
   .navbar.is-link .navbar-end .navbar-link::after {
@@ -6785,7 +6785,7 @@ a.list-item {
 .navbar.is-info .navbar-brand .navbar-link:hover,
 .navbar.is-info .navbar-brand .navbar-link.is-active {
   background-color: #238cd1;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .navbar.is-info .navbar-brand .navbar-link::after {
@@ -6814,7 +6814,7 @@ a.list-item {
   .navbar.is-info .navbar-end .navbar-link:hover,
   .navbar.is-info .navbar-end .navbar-link.is-active {
     background-color: #238cd1;
-    color: #fff;
+    color: #e8adf4;
   }
   .navbar.is-info .navbar-start .navbar-link::after,
   .navbar.is-info .navbar-end .navbar-link::after {
@@ -6847,7 +6847,7 @@ a.list-item {
 .navbar.is-success .navbar-brand .navbar-link:hover,
 .navbar.is-success .navbar-brand .navbar-link.is-active {
   background-color: #3abb67;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .navbar.is-success .navbar-brand .navbar-link::after {
@@ -6876,7 +6876,7 @@ a.list-item {
   .navbar.is-success .navbar-end .navbar-link:hover,
   .navbar.is-success .navbar-end .navbar-link.is-active {
     background-color: #3abb67;
-    color: #fff;
+    color: #e8adf4;
   }
   .navbar.is-success .navbar-start .navbar-link::after,
   .navbar.is-success .navbar-end .navbar-link::after {
@@ -6971,7 +6971,7 @@ a.list-item {
 .navbar.is-danger .navbar-brand .navbar-link:hover,
 .navbar.is-danger .navbar-brand .navbar-link.is-active {
   background-color: #ef2e55;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .navbar.is-danger .navbar-brand .navbar-link::after {
@@ -7000,7 +7000,7 @@ a.list-item {
   .navbar.is-danger .navbar-end .navbar-link:hover,
   .navbar.is-danger .navbar-end .navbar-link.is-active {
     background-color: #ef2e55;
-    color: #fff;
+    color: #e8adf4;
   }
   .navbar.is-danger .navbar-start .navbar-link::after,
   .navbar.is-danger .navbar-end .navbar-link::after {
@@ -10214,7 +10214,7 @@ label.panel-block:hover {
 .hero.is-dark .navbar-link:hover,
 .hero.is-dark .navbar-link.is-active {
   background-color: #292929;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-dark .tabs a {
@@ -10292,7 +10292,7 @@ label.panel-block:hover {
 .hero.is-primary .navbar-link:hover,
 .hero.is-primary .navbar-link.is-active {
   background-color: #00b89c;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-primary .tabs a {
@@ -10370,7 +10370,7 @@ label.panel-block:hover {
 .hero.is-link .navbar-link:hover,
 .hero.is-link .navbar-link.is-active {
   background-color: #2366d1;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-link .tabs a {
@@ -10448,7 +10448,7 @@ label.panel-block:hover {
 .hero.is-info .navbar-link:hover,
 .hero.is-info .navbar-link.is-active {
   background-color: #238cd1;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-info .tabs a {
@@ -10526,7 +10526,7 @@ label.panel-block:hover {
 .hero.is-success .navbar-link:hover,
 .hero.is-success .navbar-link.is-active {
   background-color: #3abb67;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-success .tabs a {
@@ -10682,7 +10682,7 @@ label.panel-block:hover {
 .hero.is-danger .navbar-link:hover,
 .hero.is-danger .navbar-link.is-active {
   background-color: #ef2e55;
-  color: #fff;
+  color: #e8adf4;
 }
 
 .hero.is-danger .tabs a {

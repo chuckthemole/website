@@ -3,7 +3,7 @@
 }
 
 .alt-background-color {
-  background-color: #0a0c97;
+  background-color: #A9EAF7;
 }
 
 #navbar {
@@ -11,6 +11,16 @@
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.project {
+  font-family: helvetica;
+  color: #da7fec;
+  text-align: left;
+  font-size: 30px;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
 }
 
 .my-footer {
@@ -64,13 +74,43 @@ html {
 /*Added CSS code Charles Thomas*/
 /*******Ctr F5 for refresh******/
 
+.hello {
+  font-family: helvetica;
+  color: #e8adf4;
+  text-align: left;
+  font-size: 30px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
 .charles {
   font-family: helvetica;
   color: #da7fec;
   text-align: left;
-  font-size: 50px;
+  font-size: 80px;
   grid-row-start: 2;
   grid-row-end: 2;
+  position: relative;
+}
+
+.i_like_to_build {
+  font-family: helvetica;
+  color: #b05bc1;
+  text-align: left;
+  font-size: 90px;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+}
+
+.about {
+  font-family: helvetica;
+  color: #cc00cc;
+  text-align: left;
+  font-size: 30px;
+  grid-row-start: 1;
+  grid-row-end: 1;
   position: relative;
 }
 
@@ -87,34 +127,18 @@ html {
   color: #e8adf4;
 }
 
+.my-navbar-item:hover {
+  color: #e8adf4;
+}
+
 .body {
   height: 100%;
   width: 100%;
   background-color:red;
 }
 
-.hello {
-  font-family: helvetica;
-  color: #e8adf4;
-  text-align: left;
-  font-size: 40px;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  position: relative;
-}
-
-.about {
-  font-family: helvetica;
-  color: #cc00cc;
-  text-align: left;
-  font-size: 20px;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  position: relative;
-}
-
 .rounds {
-  border-radius: 70%;
+  border-radius: 10%;
   padding: 15px;
 }
 

@@ -12,13 +12,16 @@
       </p>
       <p class="charles">
         Charles Thomas.<br>
-        I'm a student in Oakland, California<br>
+      </p>
+      <p class="i_like_to_build">
+        I like to build things.<br>
       </p>
       <p class='about w3-animate-bottom' style="color:#cc00cc" style='font-family: helvetica'>
-        currently pursuing my Master's in<br>
-        Interdisciplinary Computer Science at <br>
-        Mills College. My anticipated graduation <br>
-        date is December of 2020.<br><br><br>
+        I'm a software developer based in Oakland, California and <br>
+        a recent graduate of Mills College with a Master's degree <br>
+        in Interdisciplinary Computer Science. Currently, I am seeking <br>
+        a software engineering position to utilize my programming, <br>
+        debugging, and problem solving skills. <br><br><br>
         <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
 
       </p>
@@ -80,20 +83,181 @@
   </div>
 </div>
 
-<div class="column is-section is-three-quarters" id="projects">
+<div class="column is-section is-full" id="projects">
   <div class="columns is-multiline">
     <p class="title column is-full">Projects</p>
-    <p class="column is-three-quarters">
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-    </p>
-    <img class="rounds column is-one-quarter" src="{% static 'chucksite/images/chuckblackandwhite.JPG' %}" alt=" icon">
+
+    <div class="column is-one-third">
+      <div class="box alt-background-color">
+        <div class="box main-background-color" align="center">
+          <b class="is-capitalized project">
+            Teach Assist
+          </b> <br>
+        </div>
+        <center>
+        </center>
+        <a href="http://teach-assist.com" target="_blank">
+          <div class="container-img">
+            <figure class="image is-1by1">
+              <div id="choices" name="choices">
+                <img class="rounds" src="{% static 'chucksite/images/teachassist.JPG' %}" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
+              </div>
+            </figure>
+          </div>
+        </a>
+
+        <div class="columns">
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                Video
+              </button>
+            </a>
+          </div>
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                {% if lesson.is_public %}
+                Make Private
+                {% else %}
+                Make Public
+                {% endif %}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column is-one-third">
+      <div class="box alt-background-color">
+        <div class="box main-background-color" align="center">
+          <b class="is-capitalized project">
+            Teach Assist
+          </b> <br>
+        </div>
+        <center>
+        </center>
+        <a href="http://teach-assist.com" target="_blank">
+          <div class="container-img">
+            <figure class="image is-1by1">
+              <div id="choices" name="choices">
+                <img class="rounds" src="{% static 'chucksite/images/teachassist.JPG' %}" class="is-rounded" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
+              </div>
+            </figure>
+          </div>
+        </a>
+
+        <div class="columns">
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                Video
+              </button>
+            </a>
+          </div>
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                {% if lesson.is_public %}
+                Make Private
+                {% else %}
+                Make Public
+                {% endif %}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column is-one-third">
+      <div class="box alt-background-color">
+        <div class="box main-background-color" align="center">
+          <b class="is-capitalized project">
+            Teach Assist
+          </b> <br>
+        </div>
+        <center>
+        </center>
+        <a href="http://teach-assist.com" target="_blank">
+          <div class="container-img">
+            <figure class="image is-1by1">
+              <div id="choices" name="choices">
+                <img class="rounds" src="{% static 'chucksite/images/teachassist.JPG' %}" class="is-rounded" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
+              </div>
+            </figure>
+          </div>
+        </a>
+
+        <div class="columns">
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                Video
+              </button>
+            </a>
+          </div>
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                {% if lesson.is_public %}
+                Make Private
+                {% else %}
+                Make Public
+                {% endif %}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column is-one-third">
+      <div class="box alt-background-color">
+        <div class="box main-background-color" align="center">
+          <b class="is-capitalized project">
+            Teach Assist
+          </b> <br>
+        </div>
+        <center>
+        </center>
+        <a href="http://teach-assist.com" target="_blank">
+          <div class="container-img">
+            <figure class="image is-1by1">
+              <div id="choices" name="choices">
+                <img class="rounds" src="{% static 'chucksite/images/teachassist.JPG' %}" class="is-rounded" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
+              </div>
+            </figure>
+          </div>
+        </a>
+
+        <div class="columns">
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                Video
+              </button>
+            </a>
+          </div>
+          <div class="column">
+            <a href="" target="_blank">
+              <button class="button is-success is-fullwidth is-rounded is-outlined">
+                {% if lesson.is_public %}
+                Make Private
+                {% else %}
+                Make Public
+                {% endif %}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
