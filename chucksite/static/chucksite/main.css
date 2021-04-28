@@ -5,3 +5,21 @@
 .alt-background-color {
   background-color: #0a0c97;
 }
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 25%;
+  height: 25vh;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.main {
+  height: 200vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}

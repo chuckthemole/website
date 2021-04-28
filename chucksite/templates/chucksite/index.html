@@ -5,14 +5,11 @@
 
 {% load static %}
 
-<div style="margin: auto" class="tile is-8 is-parent">
-  <div class="tile is-child box" style="background-color:#fce8fa">
+<div class="tile is-8 is-parent">
+  <div class="tile is-child" style="background-color:#fce8fa">
 
     <p>
       <div class="grid-cont" style="background-color:pink">
-        <div>
-          <img class="rounds imgShake" src="{% static 'chucksite/images/chuckpic.JPG' %}" alt=" icon">
-        </div>
         <div >
           <p class="hello">
             Hello, my name is
@@ -27,6 +24,11 @@
     </p>
 
   </div>
+</div>
+
+
+<div>
+  <img class="rounds imgShake" src="{% static 'chucksite/images/chuckpic.JPG' %}" alt=" icon">
 </div>
 
 {% endblock content %}

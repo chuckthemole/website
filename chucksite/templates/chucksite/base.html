@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color:#fce8ee">
+<html lang="en" class="main-background-color">
 
 <head>
   <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     }
   </script>
 
-  <nav class="navbar is-transparent">
+  <nav class="navbar is-fixed-top is-primary main-navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
@@ -85,19 +85,32 @@
     </div>
   </nav>
 
-  <section class="section">
-    <div class="container">
+  <div class="columns">
+
+    <div class="menu column is-1 sidebar">
+        <div class="columns is-multiline">
+          <a class="column is-half" href="https://github.com/chuckthemole" target="_blank">
+            <img class="imgShake main-background-color" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+          </a>
+          <div class="column is-full"></div>
+          <a class="column is-half" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
+            <img class="imgShake" src="{% static 'chucksite/images/linkedin_icon.PNG' %}" alt="Linkedin">
+          </a>
+        </div>
+    </div>
+
+    <section class="section container column main">
       <div>
         {% block content %}{% endblock content %}
-
-        <h2 class="footer" style="background-color:#fce8ee">
-          <a class="iconContainer" href="https://www.linkedin.com/in/chuckthemole/"><i class="fab fa-linkedin"></i></a>
-          <a class="iconContainer" href="https://github.com/chuckthemole"><i class='fab fa-github-square'></i></a>
-        </h2>
-
+        <h2 class="footer" style="background-color:#fce8ee"></h2>
       </div>
+    </section>
+
+    <div class="column is-1">
+
     </div>
-  </section>
+
+  </div>
 
 </body>
 
