@@ -5,29 +5,32 @@
 
 {% load static %}
 
-<div class="tile is-8 is-parent">
-  <div class="tile is-child" style="background-color:#fce8fa">
-
-    <p>
-      <div class="grid-cont" style="background-color:pink">
-        <div >
+  <div class="columns is-vcentered main main-background-color">
+      <div class="column is-full main-background-color">
+        <div style="padding-left: 100px;">
           <p class="hello">
             Hello, my name is
           </p>
           <p class="charles">
-            Charles Thomas.
+            Charles Thomas.<br>
+            I'm a student in Oakland, California<br>
+          </p>
+          <p class='about w3-animate-bottom' style="color:#cc00cc" style='font-family: helvetica'>
+            currently pursuing my Master's in<br>
+            Interdisciplinary Computer Science at <br>
+            Mills College. My anticipated graduation <br>
+            date is December of 2020.<br><br><br>
+            <button class="button is-primary is-outlined">Get in touch</button>
+
           </p>
           <p id="about" class='about w3-animate-bottom' style="color:#cc00cc" style='font-family: helvetica'>
           </p>
         </div>
       </div>
-    </p>
-
   </div>
-</div>
 
 
-<div>
+<div class="column">
   <img class="rounds imgShake" src="{% static 'chucksite/images/chuckpic.JPG' %}" alt=" icon">
 </div>
 

@@ -72,42 +72,45 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="field is-grouped">
-            <a class="navbar-item" href="https://github.com/chuckthemole" target="_blank">
-              <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+            <a class="button is-primary is-outlined" href="https://github.com/chuckthemole" target="_blank">
+              email
             </a>
-            <a class="navbar-item" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
-              <img class="imgShake" src="{% static 'chucksite/images/linkedin_icon.PNG' %}" alt="Linkedin">
+          </div>
+          <div class="navbar-item">
+
+            <a class="button is-primary is-outlined" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
+              resume
             </a>
           </div>
         </div>
       </div>
+
     </div>
   </nav>
 
   <div class="columns">
 
-    <div class="menu column is-1 sidebar">
-        <div class="columns is-multiline">
-          <a class="column is-half" href="https://github.com/chuckthemole" target="_blank">
-            <img class="imgShake main-background-color" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-          </a>
-          <div class="column is-full"></div>
-          <a class="column is-half" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
-            <img class="imgShake" src="{% static 'chucksite/images/linkedin_icon.PNG' %}" alt="Linkedin">
-          </a>
-        </div>
+    <div class="menu column is-2 sidebar">
+      <div class="columns is-multiline">
+        <a class="column is-one-quarter" href="https://github.com/chuckthemole" target="_blank">
+          <img class="imgShake main-background-color" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+        </a>
+        <div class="column is-full"></div>
+        <a class="column is-one-quarter" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
+          <img class="imgShake" src="{% static 'chucksite/images/linkedin_icon.PNG' %}" alt="Linkedin">
+        </a>
+      </div>
     </div>
 
-    <section class="section container column main">
-      <div>
+    <section class="section container column">
         {% block content %}{% endblock content %}
         <h2 class="footer" style="background-color:#fce8ee"></h2>
-      </div>
     </section>
 
-    <div class="column is-1">
-
+    <div class="column is-1 sidebar">
+      <div class="columns is-centered">
+        <a class="column is-half email">chuckthemole@gmail.com</a>
+      </div>
     </div>
 
   </div>
