@@ -13,6 +13,16 @@
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
+.square {
+  object-fit: cover;
+  width:230px;
+  height:230px;
+}
+
+.square:hover {
+
+}
+
 .project {
   font-family: helvetica;
   color: #da7fec;
