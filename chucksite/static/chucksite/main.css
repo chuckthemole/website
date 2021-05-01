@@ -11,6 +11,7 @@
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .square {
@@ -88,7 +89,6 @@ html {
   font-family: helvetica;
   color: #e8adf4;
   text-align: left;
-  font-size: 30px;
   grid-row-start: 1;
   grid-row-end: 1;
   position: relative;
@@ -98,7 +98,6 @@ html {
   font-family: helvetica;
   color: #da7fec;
   text-align: left;
-  font-size: 80px;
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
@@ -108,7 +107,6 @@ html {
   font-family: helvetica;
   color: #b05bc1;
   text-align: left;
-  font-size: 90px;
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
@@ -118,7 +116,6 @@ html {
   font-family: helvetica;
   color: #cc00cc;
   text-align: left;
-  font-size: 30px;
   grid-row-start: 1;
   grid-row-end: 1;
   position: relative;
