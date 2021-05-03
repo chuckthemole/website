@@ -18,6 +18,26 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+img {
+  border-radius: 1%;
+}
+
+.img-wrap {
+  width: 200px;
+  height: 450px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bullet_list {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+    display: list-item;
+ }
+
 .square {
   object-fit: cover;
   width: 230px;
@@ -116,6 +136,15 @@ html {
 .about {
   font-family: helvetica;
   color: #cc00cc;
+  text-align: left;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
+.text {
+  font-family: helvetica;
+  color: #645ebd;
   text-align: left;
   grid-row-start: 1;
   grid-row-end: 1;

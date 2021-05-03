@@ -14,16 +14,15 @@
         Charles Thomas.<br>
       </p>
       <p class="i_like_to_build is-size-1">
-        I like to build things.<br>
+        I enjoy building things.<br>
       </p>
       <p class='about w3-animate-bottom is-size-4 has-text-justified' style="color:#cc00cc" style='font-family: helvetica'>
         I'm a software developer based in Oakland, California and
-        a recent graduate of Mills College with a Master's degree
+        a recent graduate of Mills College earning a master's degree
         in Interdisciplinary Computer Science. Currently, I am seeking
         a software engineering position to utilize my programming,
         debugging, and problem solving skills. <br><br><br>
         <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
-
       </p>
       <p id="about" class='about w3-animate-bottom' style="color:#cc00cc" style='font-family: helvetica'>
       </p>
@@ -31,45 +30,69 @@
   </div>
 </div>
 
-
-<div class="column is-section is-four-fifths" id="aboutme">
+<div class="column is-section is-full" id="aboutme" style="margin-bottom: 12cm;">
   <div class="columns is-multiline">
     <p class="title column is-full">About Me</p>
-    <p class="column is-two-thirds has-text-justified">
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-    </p>
-    <img class="rounds square column is-one-third" src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt=" icon">
+    <hr style="height:20px;border-width:0;color:gray;background-color:gray">
+    <div class="column text is-size-5 is-three-fifths has-text-justified">
+      Hi! My name is Charles. I enjoy creating software, developing applications,
+      analyzing data, and continually learning new technologies.
+      My interest in software began as a Math undergraduate student
+      and has continued to grow. Aside from developing I enjoy playing music
+      (guitar, piano, drums), bike riding, and playing basketball. <br><br>
+      I love to code in Java and Python but have experience with many technologies.
+      Here are some that I've been working with recently:
+      <div class="columns">
+        <div class="column is-full"></div>
+      </div>
+      <div class="columns is-size-6">
+        <ul class="column is-half">
+          <li class="bullet_list">Django</li>
+          <li class="bullet_list">AWS</li>
+          <li class="bullet_list">Pandas</li>
+        </ul>
+        <ul class="column is-half">
+          <li class="bullet_list">CSS/HTML</li>
+          <li class="bullet_list">AWS</li>
+          <li class="bullet_list">Pandas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column is-two-fifths img-wrap" style="border-radius: 2%;">
+      <img src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
+    </div>
   </div>
 </div>
 
-<div class="column is-section is-four-fifths" id="experience">
+<div class="column is-section is-full" id="experience" style="margin-bottom: 12cm;">
   <div class="columns is-multiline">
     <p class="title column is-full">Experience</p>
-    <p class="column is-two-thirds has-text-justified">
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-    </p>
-    <img class="rounds square column is-one-third" src="{% static 'chucksite/images/biscuit.JPG' %}" alt=" icon">
+
+    <div class="column is-four-fifths">
+      <div class="columns box alt-background-color">
+        <!--https://bulma.io/documentation/components/menu/-->
+        <aside class="menu column is-one-fifth">
+          <ul class="menu-list">
+            <li><a class="is-active"><div class="is-size-7">Teach Assist</div></a></li>
+            <li><a><div class="is-size-7">Teach Assist</div></a></li>
+            <li><a><div class="is-size-7">Teach Assist</div></a></li>
+            <li><a><div class="is-size-7">Teach Assist</div></a></li>
+            <li><a><div class="is-size-7">Teach Assist</div></a></li>
+          </ul>
+        </aside>
+        <div class="column is-four-fifths">
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="column is-section is-four-fifths" id="contact">
+<div class="column is-section is-four-fifths" id="contact" style="margin-bottom: 12cm;">
   <div class="columns is-multiline">
     <p class="title column is-full">Contact</p>
-    <p class="column is-two-thirds has-text-justified">
+    <p class="column text is-size-5 is-two-thirds has-text-justified">
       about me about me about asdfads faddfdfsdad fd adf a
       about me about me about asdfads faddfdfsdad fd adf a
       about me about me about asdfads faddfdfsdad fd adf a
@@ -83,7 +106,7 @@
   </div>
 </div>
 
-<div class="column is-section is-full" id="projects">
+<div class="column is-section is-full" id="projects" style="margin-bottom: 12cm;">
   <div class="columns is-multiline">
     <p class="title column is-full">Projects</p>
     <br><br>
@@ -96,37 +119,26 @@
             Teach Assist
           </b> <br>
         </div>
-        <div class="columns is-multiline">
-          <a class="column is-half" href="http://teach-assist.com" target="_blank">
-            <img class="rounds square" src="{% static 'chucksite/images/teachassist.JPG' %}" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
-          </a>
-          <a class="column is-half" href="http://teach-assist.com" target="_blank">
-            <img class="rounds square" src="{% static 'chucksite/images/teachassist.JPG' %}" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
-          </a>
-          <a class="column is-half" href="http://teach-assist.com" target="_blank">
-            <img class="rounds square" src="{% static 'chucksite/images/teachassist.JPG' %}" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
-          </a>
-          <a class="column is-half" href="http://teach-assist.com" target="_blank">
-            <img class="rounds square" src="{% static 'chucksite/images/teachassist.JPG' %}" style="object-fit: cover;" alt="Image not found" onerror="this.onerror=null;this.src='{% static 'teach/images/no_image_available.PNG' %}';">
-          </a>
-        </div>
+        <figure class="image">
+          <img class="" style="border-radius: 1%;" src="{% static 'chucksite/images/teachassist.JPG' %}" alt="Image not found">
+        </figure>
 
         <div class="columns is-multiline">
-          <div class="column is-full">
+          <div class="column is-one-third">
             <a href="" target="_blank">
-              <button class="button is-success is-fullwidth is-rounded is-outlined">
-                Check it out!
-              </button>
+              <figure class="image container is-32x32">
+                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="youtube">
+              </figure>
             </a>
           </div>
-          <div class="column is-one-half">
+          <div class="column is-one-third">
             <a href="https://youtube.com" target="_blank">
               <figure class="image container is-96x96">
                 <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
               </figure>
             </a>
           </div>
-          <div class="column is-one-half">
+          <div class="column is-one-third">
             <a href="https://youtube.com" target="_blank" style="justify-content: center;">
               <figure class="image container is-32x32">
                 <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
@@ -134,10 +146,21 @@
             </a>
           </div>
         </div>
+
       </div>
     </div>
 
-    <div class="column is-half"></div>
+    <p class="column text is-size-5 has-text-justified">
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+      about me about me about asdfads faddfdfsdad fd adf a
+    </p>
+
     <div class="column is-half"></div>
 
     <!--Find the Rock-->
@@ -345,7 +368,7 @@
 
 
     <!--Cats-->
-    <div id="cats">
+    <div id="cats" style="margin-top: 6cm;">
       <p class="title column is-full">My Cats</p>
       <div class="columns is-multiline">
         <p class="column is-full has-text-centered is-size-1 charles">Biscuit & Basil</p>
