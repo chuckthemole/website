@@ -7,22 +7,24 @@
 }
 
 #navbar {
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  /* Full width */
+  transition: top 0.3s;
+  /* Transition effect when sliding down (and up) */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .square {
   object-fit: cover;
-  width:230px;
-  height:230px;
+  width: 230px;
+  height: 230px;
 }
 
-.square:hover {
-
-}
+.square:hover {}
 
 .project {
   font-family: helvetica;
@@ -84,7 +86,6 @@ html {
 
 /*Added CSS code Charles Thomas*/
 /*******Ctr F5 for refresh******/
-
 .hello {
   font-family: helvetica;
   color: #e8adf4;
@@ -141,7 +142,7 @@ html {
 .body {
   height: 100%;
   width: 100%;
-  background-color:red;
+  background-color: red;
 }
 
 .rounds {
@@ -152,23 +153,54 @@ html {
 .imgShake:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
-
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 /*name and about me*/
