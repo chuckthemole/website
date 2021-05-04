@@ -4,6 +4,10 @@
 
 {% load static %}
 
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
 <div class="columns is-vcentered main main-background-color" id="home">
   <div class="column is-four-fifths main-background-color">
     <div class="is-section">
@@ -59,7 +63,7 @@
       </div>
     </div>
     <div class="column is-two-fifths img-wrap" style="border-radius: 2%;">
-      <img src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
+      <img class="chuck-img" src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
     </div>
   </div>
 </div>
@@ -71,22 +75,22 @@
     <div class="column is-four-fifths">
       <div class="columns box alt-background-color">
         <!--https://bulma.io/documentation/components/menu/-->
-        <aside class="menu column is-one-fifth">
+        <aside class="menu column is-one-fifth" id="experience_menu">
           <ul class="menu-list">
             <li><a class="is-active">
                 <div class="is-size-7">Teach Assist</div>
               </a></li>
-            <li><a>
-                <div class="is-size-7">Teach Assist</div>
+            <li><a onclick="find_the_rock()">
+                <div class="is-size-7">Find The Rock</div>
               </a></li>
-            <li><a>
-                <div class="is-size-7">Teach Assist</div>
+            <li><a onclick="klotski()">
+                <div class="is-size-7">Klotski</div>
               </a></li>
-            <li><a>
-                <div class="is-size-7">Teach Assist</div>
+            <li><a onclick="traveler()">
+                <div class="is-size-7">Traveler</div>
               </a></li>
-            <li><a>
-                <div class="is-size-7">Teach Assist</div>
+            <li><a onclick="skyline()">
+                <div class="is-size-7">Skyline HS</div>
               </a></li>
           </ul>
         </aside>
@@ -95,6 +99,121 @@
         </div>
       </div>
     </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+      function not_working() {
+        $("#experience_menu").load("hello");
+      }
+    </script>
+
+    <script>
+      function teach_assist() {
+        document.getElementById("experience_menu").innerHTML =
+          '<ul class="menu-list">' +
+          '<li><a class="is-active">' +
+          '<div class="is-size-7">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="is-size-7">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="is-size-7">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="is-size-7">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="is-size-7">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>';
+      }
+
+      function find_the_rock() {
+        document.getElementById("experience_menu").innerHTML =
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="is-size-7">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="is-size-7">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="is-size-7">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="is-size-7">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="is-size-7">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>';
+      }
+
+      function klotski() {
+        document.getElementById("experience_menu").innerHTML =
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="is-size-7">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="is-size-7">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="is-size-7">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="is-size-7">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="is-size-7">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>';
+      }
+
+      function traveler() {
+        document.getElementById("experience_menu").innerHTML =
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="is-size-7">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="is-size-7">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="is-size-7">Klotski</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="is-size-7">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="is-size-7">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>';
+      }
+
+      function skyline() {
+        document.getElementById("experience_menu").innerHTML =
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="is-size-7">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="is-size-7">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="is-size-7">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="is-size-7">Traveler</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="is-size-7">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>';
+      }
+    </script>
 
   </div>
 </div>
@@ -124,7 +243,8 @@
           <div class="column is-full">
             <div class="columns is-centered project">
               Teach Assist
-            </div>          </div>
+            </div>
+          </div>
           <div class="column is-full">
             <p>
               about me about me about asdfads faddfdfsdad fd adf a
@@ -368,8 +488,9 @@
     <p class="title column is-full has-text-centered">Contact</p>
     <div class="column is-one-quarter"></div>
     <p class="column is-half text is-size-5 has-text-justified">
-      I am currently looking for new opportunities. Feel free to contact me for
-      other reasons, too!
+      I am currently looking for new opportunities. I would like to
+      learn new skills, work on a collaborative team, and enjoy the
+      work I do. Feel free to contact me for other reasons, too!
     </p>
     <div class="column is-one-quarter"></div>
     <div class="column if-full">
@@ -382,7 +503,6 @@
 
 <!--Cats-->
 <div id="cats" style="margin-top: 6cm;">
-  <p class="title column is-full">My Cats</p>
   <div class="columns is-multiline">
     <p class="column is-full has-text-centered is-size-1 charles">Biscuit & Basil</p>
     <div class="column is half">
