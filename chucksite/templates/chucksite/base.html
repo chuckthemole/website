@@ -22,10 +22,11 @@
     }
   </script>
 
+  {% load static %}
   <nav id="navbar" class="navbar is-fixed-top is-primary main-navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#home">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="CPT" width="112" height="28">
+        <img class="nav-icon" src="{% static 'chucksite/images/cpt_icon.PNG' %}" alt="CPT">
       </a>
       <div class="navbar-burger">
         <span>

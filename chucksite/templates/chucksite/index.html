@@ -99,6 +99,7 @@
   </div>
 </div>
 
+<!--Projects-->
 <div class="column is-section is-full" style="margin-bottom: 12cm;">
   <div id="projects">
     <div class="columns is-multiline">
@@ -107,55 +108,57 @@
 
       <!--Teach Assist-->
       <div class="column is-half" id="teach_assist">
-        <div class="box alt-background-color">
-          <div class="box main-background-color" align="center">
-            <b class="is-capitalized project">
-              Teach Assist
-            </b> <br>
+        <div class="columns">
+          <div class="column is-three-fifths" style="position: absolute;">
+            <a href="http://teach-assist.com" target="_blank">
+              <figure class="image">
+                <img class="project-img" src="{% static 'chucksite/images/teachassist.JPG' %}" alt="Image not found">
+              </figure>
+            </a>
           </div>
-          <figure class="image">
-            <img class="" style="border-radius: 1%;" src="{% static 'chucksite/images/teachassist.JPG' %}" alt="Image not found">
-          </figure>
-
-          <div class="columns is-multiline">
-            <div class="column is-one-third">
-              <a href="" target="_blank">
-                <figure class="image container is-32x32">
-                  <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="youtube">
-                </figure>
-              </a>
-            </div>
-            <div class="column is-one-third">
-              <a href="https://youtube.com" target="_blank">
-                <figure class="image container is-96x96">
-                  <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-                </figure>
-              </a>
-            </div>
-            <div class="column is-one-third">
-              <a href="https://youtube.com" target="_blank" style="justify-content: center;">
-                <figure class="image container is-32x32">
-                  <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-                </figure>
-              </a>
-            </div>
-          </div>
-
         </div>
       </div>
 
-      <p class="column text is-size-5 has-text-justified">
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-        about me about me about asdfads faddfdfsdad fd adf a
-      </p>
+      <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+        <div class="columns is-multiline">
+          <div class="column is-full">
+            <div class="columns is-centered project">
+              Teach Assist
+            </div>          </div>
+          <div class="column is-full">
+            <p>
+              about me about me about asdfads faddfdfsdad fd adf a
+              about me about me about asdfads faddfdfsdad fd adf a
+              about me about me about asdfads faddfdfsdad fd adf a
+              about me about me about asdfads faddfdfsdad fd adf a
+              about me about me about asdfads faddfdfsdad fd adf a
+            </p>
+          </div>
+          <div class="column is-one-third">
+            <a href="" target="_blank">
+              <figure class="image container is-32x32">
+                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="youtube">
+              </figure>
+            </a>
+          </div>
+          <div class="column is-one-third">
+            <a href="https://youtube.com" target="_blank">
+              <figure class="image container is-96x96">
+                <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+              </figure>
+            </a>
+          </div>
+          <div class="column is-one-third">
+            <a href="https://youtube.com" target="_blank" style="justify-content: center;">
+              <figure class="image container is-32x32">
+                <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <div class="column is-half"></div>
+      <div class="column is-full"></div>
 
       <!--Find the Rock-->
       <div class="column is-half" id="find_the_rock">
@@ -355,21 +358,18 @@
           </div>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
 
 <div class="column is-section is-four-fifths" id="contact" style="margin-bottom: 2cm;">
   <div class="columns is-multiline">
     <p class="title column is-full has-text-centered">Contact</p>
     <div class="column is-one-quarter"></div>
     <p class="column is-half text is-size-5 has-text-justified">
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
-      about me about me about asdfads faddfdfsdad fd adf a
+      I am currently looking for new opportunities. Feel free to contact me for
+      other reasons, too!
     </p>
     <div class="column is-one-quarter"></div>
     <div class="column if-full">
@@ -404,7 +404,6 @@
 
 <div class="column is-full"></div>
 
-</div>
-</div>
+
 
 {% endblock content %}

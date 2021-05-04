@@ -6,6 +6,10 @@
   background-color: #A9EAF7;
 }
 
+.description-background-color {
+  background-color: #564afe;
+}
+
 #navbar {
   position: fixed;
   /* Make it stick/fixed */
@@ -15,6 +19,22 @@
   /* Full width */
   transition: top 0.3s;
   /* Transition effect when sliding down (and up) */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-img {
+  border-radius: 1%;
+  filter: brightness(50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-img:hover {
+  border-radius: 1%;
+  filter: brightness(100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -42,6 +62,12 @@ img {
   object-fit: cover;
   width: 230px;
   height: 230px;
+}
+
+.nav-icon {
+  object-fit: cover;
+  width: 115px;
+  height: 115px;
 }
 
 .square:hover {}
@@ -145,6 +171,15 @@ html {
 .text {
   font-family: helvetica;
   color: #645ebd;
+  text-align: left;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
+.description-text {
+  font-family: helvetica;
+  color: white;
   text-align: left;
   grid-row-start: 1;
   grid-row-end: 1;
