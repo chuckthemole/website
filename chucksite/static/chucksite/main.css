@@ -186,6 +186,16 @@ html {
   position: relative;
 }
 
+.selected {
+  font-family: helvetica;
+  color: white;
+  text-align: left;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
+
 .text {
   font-family: helvetica;
   color: #645ebd;
