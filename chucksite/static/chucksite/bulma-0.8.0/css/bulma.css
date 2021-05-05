@@ -6058,13 +6058,13 @@ a.list-item {
 }
 
 .menu-list a:hover {
-  background-color: whitesmoke;
+  background-color: #CCEEFA;
   color: #363636;
 }
 
 .menu-list a.is-active {
-  background-color: #3273dc;
-  color: #fff;
+  background-color: #3886f7;
+  color: #CCEEFA;
 }
 
 .menu-list li ul {

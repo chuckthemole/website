@@ -73,29 +73,46 @@
     <p class="title column is-full">Experience</p>
 
     <div class="column is-four-fifths">
-      <div class="columns box alt-background-color">
+      <div class="columns box alt-background-color" id="experience_menu">
         <!--https://bulma.io/documentation/components/menu/-->
-        <aside class="menu column is-one-fifth" id="experience_menu">
+        <aside class="menu column is-one-fifth">
           <ul class="menu-list">
             <li><a class="is-active">
-                <div class="is-size-7">Teach Assist</div>
+                <div class="is-size-6">Teach Assist</div>
               </a></li>
             <li><a onclick="find_the_rock()">
-                <div class="is-size-7">Find The Rock</div>
+                <div class="about is-size-6">Find The Rock</div>
               </a></li>
             <li><a onclick="klotski()">
-                <div class="is-size-7">Klotski</div>
+                <div class="about is-size-6">Klotski</div>
               </a></li>
             <li><a onclick="traveler()">
-                <div class="is-size-7">Traveler</div>
+                <div class="about is-size-6">Traveler</div>
               </a></li>
             <li><a onclick="skyline()">
-                <div class="is-size-7">Skyline HS</div>
+                <div class="about is-size-6">Skyline HS</div>
               </a></li>
           </ul>
         </aside>
         <div class="column is-four-fifths">
-
+          <div class="columns is-multiline">
+            <span class="column is-full is-size-3 charles" style="white-space: no-wrap;">
+              Full-Stack Software Developer at Teach Assist
+            </span>
+            <div class="column is-full is-size-6 about">
+              <li class="wrap bullet_list">
+                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+              </li>
+              <br>
+              <li class="wrap bullet_list">
+                odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+              </li>
+              <br>
+              <li class="wrap bullet_list">
+                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+              </li>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -111,107 +128,217 @@
     <script>
       function teach_assist() {
         document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
           '<ul class="menu-list">' +
           '<li><a class="is-active">' +
-          '<div class="is-size-7">Teach Assist</div>' +
+          '<div class="is-size-6">Teach Assist</div>' +
           '</a></li>' +
           '<li><a onclick="find_the_rock()">' +
-          '<div class="is-size-7">Find The Rock</div>' +
+          '<div class="is-size-6 about">Find The Rock</div>' +
           '</a></li>' +
           '<li><a onclick="klotski()">' +
-          '<div class="is-size-7">Klotski</div>' +
+          '<div class="is-size-6 about">Klotski</div>' +
           '</a></li>' +
           '<li><a onclick="traveler()">' +
-          '<div class="is-size-7">Traveler</div>' +
+          '<div class="is-size-6 about">Traveler</div>' +
           '</a></li>' +
           '<li><a onclick="skyline()">' +
-          '<div class="is-size-7">Skyline HS</div>' +
+          '<div class="is-size-6 about">Skyline HS</div>' +
           '</a></li>' +
-          '</ul>';
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline">' +
+          '<span class="column is-full is-size-3 charles" style="white-space: no-wrap;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full is-size-6 about">' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
       }
 
       function find_the_rock() {
         document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
           '<ul class="menu-list">' +
           '<li><a onclick="teach_assist()">' +
-          '<div class="is-size-7">Teach Assist</div>' +
+          '<div class="is-size-6 about">Teach Assist</div>' +
           '</a></li>' +
           '<li><a class="is-active">' +
-          '<div class="is-size-7">Find The Rock</div>' +
+          '<div class="is-size-6">Find The Rock</div>' +
           '</a></li>' +
           '<li><a onclick="klotski()">' +
-          '<div class="is-size-7">Klotski</div>' +
+          '<div class="is-size-6 about">Klotski</div>' +
           '</a></li>' +
           '<li><a onclick="traveler()">' +
-          '<div class="is-size-7">Traveler</div>' +
+          '<div class="is-size-6 about">Traveler</div>' +
           '</a></li>' +
           '<li><a onclick="skyline()">' +
-          '<div class="is-size-7">Skyline HS</div>' +
+          '<div class="is-size-6 about">Skyline HS</div>' +
           '</a></li>' +
-          '</ul>';
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline">' +
+          '<span class="column is-full is-size-3 charles" style="white-space: no-wrap;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full is-size-6 about">' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
       }
 
       function klotski() {
         document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
           '<ul class="menu-list">' +
           '<li><a onclick="teach_assist()">' +
-          '<div class="is-size-7">Teach Assist</div>' +
+          '<div class="is-size-6 about">Teach Assist</div>' +
           '</a></li>' +
           '<li><a onclick="find_the_rock()">' +
-          '<div class="is-size-7">Find The Rock</div>' +
+          '<div class="is-size-6 about">Find The Rock</div>' +
           '</a></li>' +
           '<li><a class="is-active">' +
-          '<div class="is-size-7">Klotski</div>' +
+          '<div class="is-size-6">Klotski</div>' +
           '</a></li>' +
           '<li><a onclick="traveler()">' +
-          '<div class="is-size-7">Traveler</div>' +
+          '<div class="is-size-6 about">Traveler</div>' +
           '</a></li>' +
           '<li><a onclick="skyline()">' +
-          '<div class="is-size-7">Skyline HS</div>' +
+          '<div class="is-size-6 about">Skyline HS</div>' +
           '</a></li>' +
-          '</ul>';
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline">' +
+          '<span class="column is-full is-size-3 charles" style="white-space: no-wrap;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full is-size-6 about">' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
       }
 
       function traveler() {
         document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
           '<ul class="menu-list">' +
           '<li><a onclick="teach_assist()">' +
-          '<div class="is-size-7">Teach Assist</div>' +
+          '<div class="is-size-6 about">Teach Assist</div>' +
           '</a></li>' +
           '<li><a onclick="find_the_rock()">' +
-          '<div class="is-size-7">Find The Rock</div>' +
+          '<div class="is-size-6 about">Find The Rock</div>' +
           '</a></li>' +
           '<li><a onclick="klotski()">' +
-          '<div class="is-size-7">Klotski</div>' +
+          '<div class="is-size-6 about">Klotski</div>' +
           '</a></li>' +
           '<li><a class="is-active">' +
-          '<div class="is-size-7">Traveler</div>' +
+          '<div class="is-size-6">Traveler</div>' +
           '</a></li>' +
           '<li><a onclick="skyline()">' +
-          '<div class="is-size-7">Skyline HS</div>' +
+          '<div class="is-size-6 about">Skyline HS</div>' +
           '</a></li>' +
-          '</ul>';
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline">' +
+          '<span class="column is-full is-size-3 charles" style="white-space: no-wrap;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full is-size-6 about">' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
       }
 
       function skyline() {
         document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
           '<ul class="menu-list">' +
           '<li><a onclick="teach_assist()">' +
-          '<div class="is-size-7">Teach Assist</div>' +
+          '<div class="is-size-6 about">Teach Assist</div>' +
           '</a></li>' +
           '<li><a onclick="find_the_rock()">' +
-          '<div class="is-size-7">Find The Rock</div>' +
+          '<div class="is-size-6 about">Find The Rock</div>' +
           '</a></li>' +
           '<li><a onclick="klotski()">' +
-          '<div class="is-size-7">Klotski</div>' +
+          '<div class="is-size-6 about">Klotski</div>' +
           '</a></li>' +
           '<li><a onclick="traveler()">' +
-          '<div class="is-size-7">Traveler</div>' +
+          '<div class="is-size-6 about">Traveler</div>' +
           '</a></li>' +
           '<li><a class="is-active">' +
-          '<div class="is-size-7">Skyline HS</div>' +
+          '<div class="is-size-6">Skyline HS</div>' +
           '</a></li>' +
-          '</ul>';
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline">' +
+          '<span class="column is-full is-size-3 charles" style="white-space: no-wrap;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full is-size-6 about">' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'odoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
       }
     </script>
 
