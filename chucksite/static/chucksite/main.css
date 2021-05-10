@@ -62,6 +62,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.cats-img {
+  border-radius: 1%;
+  filter: opacity(80%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  object-fit: cover;
+}
+
 img {
   border-radius: 1%;
 }
@@ -76,9 +83,11 @@ img {
 }
 
 .bullet_list {
-    margin-left: 10px;
     list-style-type: circle;
     display: list-item;
+    list-style-position: inside;
+    text-indent: -1.5em;
+    padding-left: 1em;
  }
 
 .square {
