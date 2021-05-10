@@ -98,8 +98,16 @@ img {
 
 .nav-icon {
   object-fit: cover;
-  width: 115px;
-  height: 115px;
+  width: 122px;
+  height: 122px;
+}
+
+.nav-icon:hover {
+  object-fit: cover;
+  width: 122px;
+  height: 122px;
+  transition: .4s;
+  filter: brightness(45%);
 }
 
 .square:hover {}
