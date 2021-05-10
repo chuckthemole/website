@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7&g(ge%+2c$h=2@r(v+m&1kn5pxbb^h#ltup_!m^3klma)8(yj'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -100,7 +100,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(default='postgres://aehpwdwasjnbzh:de5ef28005865e8b9b8f0808f1e2458e97e15ade60d391303e639a925d9fea16@ec2-34-238-26-109.compute-1.amazonaws.com:5432/dec5i2e3bqbr4i')
+DATABASES['default'] = dj_database_url.config(default=config('DB_KEY'))
 # The content of default= '  '   is  found in Heroku app URI, starts with postgres://...
 # allow us to connect locally the DB is Heroku
 
