@@ -121,6 +121,7 @@
 
   <div class="columns is-mobile">
 
+    {% if not request.user_agent.is_mobile %}
     <div class="menu column is-1 sidebar">
       <div class="columns is-multiline" style="height: 85vh;">
         <div class="column is-full" style="margin-top: auto; padding: 0px;">
@@ -146,6 +147,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
 
     <section class="section container column">
       {% block content %}{% endblock content %}
@@ -154,6 +156,7 @@
       </a>
     </section>
 
+    {% if not request.user_agent.is_mobile %}
     <div class="menu column is-1 sidebar">
       <div class="columns is-centered is-multiline" style="height: 85vh;">
         <div class="column is-full" style="margin-top: auto; padding: 0px;">
@@ -165,6 +168,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
 
   </div>
 

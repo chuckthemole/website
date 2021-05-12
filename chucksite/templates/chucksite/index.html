@@ -8,611 +8,615 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
+{% if not request.user_agent.is_mobile %}
 <div class="columns is-vcentered main main-background-color" id="home">
-  <div class="column is-four-fifths main-background-color">
-    <div class="is-section">
-      <p class="hello is-size-4">
-        Hello, my name is
-      </p>
-      <p class="charles is-size-1">
-        Charles Thomas.<br>
-      </p>
-      <p class="i_like_to_build is-size-1">
-      </p>
-      <p class='about is-size-4 has-text-justified' style="color:#cc00cc" style='font-family: helvetica'>
-        I'm a software developer based in Oakland, California and
-        a recent graduate of Mills College earning a master's degree
-        in Interdisciplinary Computer Science. Currently, I am seeking
-        a software engineering position to utilize my programming,
-        debugging, and problem solving skills. <br><br><br>
-        <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="column is-section is-full" id="aboutme" style="margin-bottom: 12cm;">
-  <div class="columns is-multiline">
-    <p class="title column is-full">About Me</p>
-
-    <hr style="height:20px;border-width:0;color:gray;background-color:gray">
-
-    <div class="column text is-size-5 is-three-fifths has-text-justified">
-      Hi! My name is Charles. I enjoy creating software, developing applications,
-      analyzing data, and continually learning new technologies.
-      My interest in software began as a Math undergraduate student
-      and has continued to grow. Aside from developing I enjoy playing music
-      (guitar, piano, drums), bike riding, and playing basketball. <br><br>
-      I love to code in Java and Python but have experience with many technologies.
-      Here are some that I've been working with recently:
-      <div class="columns">
-        <div class="column is-full"></div>
-      </div>
-      <div class="columns is-size-6 is-centered">
-        <ul class="column is-two-fifths">
-          <li class="bullet_list">Django</li>
-          <li class="bullet_list">AWS</li>
-          <li class="bullet_list">Pandas</li>
-        </ul>
-        <ul class="column is-two-fifths">
-          <li class="bullet_list">CSS/HTML</li>
-          <li class="bullet_list">JavaScript</li>
-          <li class="bullet_list">Maven/Gradle</li>
-        </ul>
+  {% else %}
+  <div class="columns is-vcentered main main-background-color is-mobile" style="margin-bottom: 12cm; margin-top: 6cm;" id="home">
+    {% endif %}
+    <div class="column is-four-fifths main-background-color">
+      <div class="is-section">
+        <p class="hello is-size-4">
+          Hello, my name is
+        </p>
+        <p class="charles is-size-1">
+          Charles Thomas.<br>
+        </p>
+        <p class="i_like_to_build is-size-1">
+        </p>
+        <p class='about is-size-4 has-text-justified' style="color:#cc00cc" style='font-family: helvetica'>
+          I'm a software developer based in Oakland, California and
+          a recent graduate of Mills College earning a master's degree
+          in Interdisciplinary Computer Science. Currently, I am seeking
+          a software engineering position to utilize my programming,
+          debugging, and problem solving skills. <br><br><br>
+          <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
+        </p>
       </div>
     </div>
-    <div class="column is-two-fifths img-wrap" style="border-radius: 2%;">
-      <img class="chuck-img" src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
-    </div>
   </div>
-</div>
 
-<!--Experience-->
-<div class="column is-section is-full" id="experience" style="margin-bottom: 12cm;">
-  <div class="columns is-multiline is-centered">
-    <p class="title column is-four-fifths">Projects & Work Experience</p>
+  <div class="column is-section is-full" id="aboutme" style="margin-bottom: 12cm;">
+    <div class="columns is-multiline is-mobile">
+      <p class="title column is-full">About Me</p>
 
-    <div class="column is-four-fifths">
-      <div class="columns box alt-background-color is-vcentered" id="experience_menu" style="width: 50vw; height: 20vw;">
-        <!--https://bulma.io/documentation/components/menu/-->
-        <aside class="menu column is-one-fifth">
-          <ul class="menu-list">
-            <li><a class="is-active">
-                <div class="selected" style="font-size: .9vw;">Teach Assist</div>
-              </a></li>
-            <li><a onclick="find_the_rock()">
-                <div class="text" style="font-size: .9vw;">Find The Rock</div>
-              </a></li>
-            <li><a onclick="klotski()">
-                <div class="text" style="font-size: .9vw;">Klotski</div>
-              </a></li>
-            <li><a onclick="traveler()">
-                <div class="text" style="font-size: .9vw;">Traveler</div>
-              </a></li>
-            <li><a onclick="skyline()">
-                <div class="text" style="font-size: .9vw;">Skyline HS</div>
-              </a></li>
+      <hr style="height:20px;border-width:0;color:gray;background-color:gray">
+
+      <div class="column text is-size-5 is-three-fifths has-text-justified">
+        Hi! My name is Charles. I enjoy creating software, developing applications,
+        analyzing data, and continually learning new technologies.
+        My interest in software began as a Math undergraduate student
+        and has continued to grow. Aside from developing I enjoy playing music
+        (guitar, piano, drums), bike riding, and playing basketball. <br><br>
+        I love to code in Java and Python but have experience with many technologies.
+        Here are some that I've been working with recently:
+        <div class="columns">
+          <div class="column is-full"></div>
+        </div>
+        <div class="columns is-size-6 is-centered is-mobile">
+          <ul class="column is-two-fifths">
+            <li class="bullet_list">Django</li>
+            <li class="bullet_list">AWS</li>
+            <li class="bullet_list">Pandas</li>
           </ul>
-        </aside>
-        <div class="column is-four-fifths">
-          <div class="columns is-multiline" id="experience_details">
-            <span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">
-              Full-Stack Software Developer at Teach Assist
-            </span>
-            <div class="column is-full text" style="font-size: .9vw;">
-              <li class="wrap bullet_list">
-                Code, develop, and maintain a Django web application focused for teacher and student use.
-              </li>
-              <br>
-              <li class="wrap bullet_list">
-                Write in a variety of different languages, develop an ORM layer to interact with
-                the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
-                web applications.
-              </li>
-              <br>
-              <li class="wrap bullet_list">
-                Communicate with teams in order to test, survey, and receive feedback on
-                the web application's features.
-              </li>
+          <ul class="column is-two-fifths">
+            <li class="bullet_list">CSS/HTML</li>
+            <li class="bullet_list">JavaScript</li>
+            <li class="bullet_list">Maven/Gradle</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-two-fifths img-wrap" style="border-radius: 2%;">
+        <img class="chuck-img" src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
+      </div>
+    </div>
+  </div>
+
+  <!--Experience-->
+  <div class="column is-section is-full" id="experience" style="margin-bottom: 12cm;">
+    <div class="columns is-multiline is-centered is-mobile">
+      <p class="title column is-four-fifths">Projects & Work Experience</p>
+
+      <div class="column is-four-fifths">
+        <div class="columns box alt-background-color is-vcentered is-mobile" id="experience_menu" style="width: 50vw; height: 20vw;">
+          <!--https://bulma.io/documentation/components/menu/-->
+          <aside class="menu column is-one-fifth">
+            <ul class="menu-list">
+              <li><a class="is-active">
+                  <div class="selected" style="font-size: .9vw;">Teach Assist</div>
+                </a></li>
+              <li><a onclick="find_the_rock()">
+                  <div class="text" style="font-size: .9vw;">Find The Rock</div>
+                </a></li>
+              <li><a onclick="klotski()">
+                  <div class="text" style="font-size: .9vw;">Klotski</div>
+                </a></li>
+              <li><a onclick="traveler()">
+                  <div class="text" style="font-size: .9vw;">Traveler</div>
+                </a></li>
+              <li><a onclick="skyline()">
+                  <div class="text" style="font-size: .9vw;">Skyline HS</div>
+                </a></li>
+            </ul>
+          </aside>
+          <div class="column is-four-fifths">
+            <div class="columns is-multiline" id="experience_details">
+              <span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">
+                Full-Stack Software Developer at Teach Assist
+              </span>
+              <div class="column is-full text" style="font-size: .9vw;">
+                <li class="wrap bullet_list">
+                  Code, develop, and maintain a Django web application focused for teacher and student use.
+                </li>
+                <br>
+                <li class="wrap bullet_list">
+                  Write in a variety of different languages, develop an ORM layer to interact with
+                  the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
+                  web applications.
+                </li>
+                <br>
+                <li class="wrap bullet_list">
+                  Communicate with teams in order to test, survey, and receive feedback on
+                  the web application's features.
+                </li>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <script src="jquery.js"></script>
+
+      <script>
+        function not_working() {
+          $("#experience_menu").load("hello");
+        }
+      </script>
+
+      <script>
+        function teach_assist() {
+          document.getElementById("experience_menu").innerHTML =
+            '<aside class="menu column is-one-fifth">' +
+            '<ul class="menu-list">' +
+            '<li><a class="is-active">' +
+            '<div class="selected" style="font-size: .9vw;">Teach Assist</div>' +
+            '</a></li>' +
+            '<li><a onclick="find_the_rock()">' +
+            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+            '</a></li>' +
+            '<li><a onclick="klotski()">' +
+            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+            '</a></li>' +
+            '<li><a onclick="traveler()">' +
+            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+            '</a></li>' +
+            '<li><a onclick="skyline()">' +
+            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+            '</a></li>' +
+            '</ul>' +
+            '</aside>' +
+            '<div class="column is-four-fifths">' +
+            '<div class="columns is-multiline fade-in" id="experience_details">' +
+            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+            'Full-Stack Software Developer at Teach Assist' +
+            '</span>' +
+            '<div class="column is-full text" style="font-size: .9vw;">' +
+            '<li class="wrap bullet_list">' +
+            'Code, develop, and maintain a Django web application focused for teacher and student use.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Write in a variety of different languages, develop an ORM layer to interact with ' +
+            'the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy ' +
+            'web applications.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Communicate with teams in order to test, survey, and receive feedback on ' +
+            "the web application's features." +
+            '</li>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }
+
+        function find_the_rock() {
+          var text = document.getElementById('experience_details');
+          text.classList.add('fade-out');
+
+          document.getElementById("experience_menu").innerHTML =
+            '<aside class="menu column is-one-fifth">' +
+            '<ul class="menu-list">' +
+            '<li><a onclick="teach_assist()">' +
+            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+            '</a></li>' +
+            '<li><a class="is-active">' +
+            '<div class="selected" style="font-size: .9vw;">Find The Rock</div>' +
+            '</a></li>' +
+            '<li><a onclick="klotski()">' +
+            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+            '</a></li>' +
+            '<li><a onclick="traveler()">' +
+            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+            '</a></li>' +
+            '<li><a onclick="skyline()">' +
+            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+            '</a></li>' +
+            '</ul>' +
+            '</aside>' +
+            '<div class="column is-four-fifths">' +
+            '<div class="columns is-multiline fade-in" id="experience_details">' +
+            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+            'Full-Stack Software Developer at Find The Rock' +
+            '</span>' +
+            '<div class="column is-full text" style="font-size: .9vw;">' +
+            '<li class="wrap bullet_list">' +
+            'Developed and shipped an interactive web application allowing people to find nearby sports.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.' +
+            '</li>' +
+            '<br>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }
+
+        function klotski() {
+          document.getElementById("experience_menu").innerHTML =
+            '<aside class="menu column is-one-fifth">' +
+            '<ul class="menu-list">' +
+            '<li><a onclick="teach_assist()">' +
+            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+            '</a></li>' +
+            '<li><a onclick="find_the_rock()">' +
+            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+            '</a></li>' +
+            '<li><a class="is-active">' +
+            '<div class="selected" style="font-size: .9vw;">Klotski</div>' +
+            '</a></li>' +
+            '<li><a onclick="traveler()">' +
+            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+            '</a></li>' +
+            '<li><a onclick="skyline()">' +
+            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+            '</a></li>' +
+            '</ul>' +
+            '</aside>' +
+            '<div class="column is-four-fifths">' +
+            '<div class="columns is-multiline fade-in" id="experience_details">' +
+            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+            'Full-Stack Software Developer at Klotski' +
+            '</span>' +
+            '<div class="column is-full text" style="font-size: .9vw;">' +
+            '<li class="wrap bullet_list">' +
+            'Developed a sliding block puzzle game in Java utilizing JavaFX.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Created features to automatically solve the game for players, undo moves, play music, and restart the game.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            "Maintain the application, document changes, and use source control to keep track of the application's lifespan. " +
+            '</li>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }
+
+        function traveler() {
+          document.getElementById("experience_menu").innerHTML =
+            '<aside class="menu column is-one-fifth">' +
+            '<ul class="menu-list">' +
+            '<li><a onclick="teach_assist()">' +
+            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+            '</a></li>' +
+            '<li><a onclick="find_the_rock()">' +
+            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+            '</a></li>' +
+            '<li><a onclick="klotski()">' +
+            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+            '</a></li>' +
+            '<li><a class="is-active">' +
+            '<div class="selected" style="font-size: .9vw;">Traveler</div>' +
+            '</a></li>' +
+            '<li><a onclick="skyline()">' +
+            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+            '</a></li>' +
+            '</ul>' +
+            '</aside>' +
+            '<div class="column is-four-fifths">' +
+            '<div class="columns is-multiline fade-in" id="experience_details">' +
+            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+            'Full-Stack Software Developer at Traveler' +
+            '</span>' +
+            '<div class="column is-full text" style="font-size: .9vw;">' +
+            '<li class="wrap bullet_list">' +
+            'Worked with a team of three other developers.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Led the team in team meetings, delegating tasks, and setting up times for troubleshooting. ' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Developed and maintained the database for the Traveler web application.' +
+            '</li>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }
+
+        function skyline() {
+          document.getElementById("experience_menu").innerHTML =
+            '<aside class="menu column is-one-fifth">' +
+            '<ul class="menu-list">' +
+            '<li><a onclick="teach_assist()">' +
+            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+            '</a></li>' +
+            '<li><a onclick="find_the_rock()">' +
+            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+            '</a></li>' +
+            '<li><a onclick="klotski()">' +
+            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+            '</a></li>' +
+            '<li><a onclick="traveler()">' +
+            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+            '</a></li>' +
+            '<li><a class="is-active">' +
+            '<div class="selected" style="font-size: .9vw;">Skyline HS</div>' +
+            '</a></li>' +
+            '</ul>' +
+            '</aside>' +
+            '<div class="column is-four-fifths">' +
+            '<div class="columns is-multiline fade-in" id="experience_details">' +
+            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+            'Mathematics Teacher at Skyline High School' +
+            '</span>' +
+            '<div class="column is-full text" style="font-size: .9vw;">' +
+            '<li class="wrap bullet_list">' +
+            'Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Cooperated with teacher, parents, and students to ensure student success.' +
+            '</li>' +
+            '<br>' +
+            '<li class="wrap bullet_list">' +
+            'Helped groups of students reach their mathematics goals.' +
+            '</li>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }
+      </script>
+
     </div>
-
-    <script src="jquery.js"></script>
-
-    <script>
-      function not_working() {
-        $("#experience_menu").load("hello");
-      }
-    </script>
-
-    <script>
-      function teach_assist() {
-        document.getElementById("experience_menu").innerHTML =
-          '<aside class="menu column is-one-fifth">' +
-          '<ul class="menu-list">' +
-          '<li><a class="is-active">' +
-          '<div class="selected" style="font-size: .9vw;">Teach Assist</div>' +
-          '</a></li>' +
-          '<li><a onclick="find_the_rock()">' +
-          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-          '</a></li>' +
-          '<li><a onclick="klotski()">' +
-          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-          '</a></li>' +
-          '<li><a onclick="traveler()">' +
-          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-          '</a></li>' +
-          '<li><a onclick="skyline()">' +
-          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-          '</a></li>' +
-          '</ul>' +
-          '</aside>' +
-          '<div class="column is-four-fifths">' +
-          '<div class="columns is-multiline fade-in" id="experience_details">' +
-          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-          'Full-Stack Software Developer at Teach Assist' +
-          '</span>' +
-          '<div class="column is-full text" style="font-size: .9vw;">' +
-          '<li class="wrap bullet_list">' +
-          'Code, develop, and maintain a Django web application focused for teacher and student use.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Write in a variety of different languages, develop an ORM layer to interact with ' +
-          'the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy ' +
-          'web applications.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Communicate with teams in order to test, survey, and receive feedback on ' +
-          "the web application's features." +
-          '</li>' +
-          '</div>' +
-          '</div>' +
-          '</div>';
-      }
-
-      function find_the_rock() {
-        var text = document.getElementById('experience_details');
-        text.classList.add('fade-out');
-
-        document.getElementById("experience_menu").innerHTML =
-          '<aside class="menu column is-one-fifth">' +
-          '<ul class="menu-list">' +
-          '<li><a onclick="teach_assist()">' +
-          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-          '</a></li>' +
-          '<li><a class="is-active">' +
-          '<div class="selected" style="font-size: .9vw;">Find The Rock</div>' +
-          '</a></li>' +
-          '<li><a onclick="klotski()">' +
-          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-          '</a></li>' +
-          '<li><a onclick="traveler()">' +
-          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-          '</a></li>' +
-          '<li><a onclick="skyline()">' +
-          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-          '</a></li>' +
-          '</ul>' +
-          '</aside>' +
-          '<div class="column is-four-fifths">' +
-          '<div class="columns is-multiline fade-in" id="experience_details">' +
-          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-          'Full-Stack Software Developer at Find The Rock' +
-          '</span>' +
-          '<div class="column is-full text" style="font-size: .9vw;">' +
-          '<li class="wrap bullet_list">' +
-          'Developed and shipped an interactive web application allowing people to find nearby sports.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.' +
-          '</li>' +
-          '<br>' +
-          '</div>' +
-          '</div>' +
-          '</div>';
-      }
-
-      function klotski() {
-        document.getElementById("experience_menu").innerHTML =
-          '<aside class="menu column is-one-fifth">' +
-          '<ul class="menu-list">' +
-          '<li><a onclick="teach_assist()">' +
-          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-          '</a></li>' +
-          '<li><a onclick="find_the_rock()">' +
-          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-          '</a></li>' +
-          '<li><a class="is-active">' +
-          '<div class="selected" style="font-size: .9vw;">Klotski</div>' +
-          '</a></li>' +
-          '<li><a onclick="traveler()">' +
-          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-          '</a></li>' +
-          '<li><a onclick="skyline()">' +
-          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-          '</a></li>' +
-          '</ul>' +
-          '</aside>' +
-          '<div class="column is-four-fifths">' +
-          '<div class="columns is-multiline fade-in" id="experience_details">' +
-          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-          'Full-Stack Software Developer at Klotski' +
-          '</span>' +
-          '<div class="column is-full text" style="font-size: .9vw;">' +
-          '<li class="wrap bullet_list">' +
-          'Developed a sliding block puzzle game in Java utilizing JavaFX.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Created features to automatically solve the game for players, undo moves, play music, and restart the game.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          "Maintain the application, document changes, and use source control to keep track of the application's lifespan. " +
-          '</li>' +
-          '</div>' +
-          '</div>' +
-          '</div>';
-      }
-
-      function traveler() {
-        document.getElementById("experience_menu").innerHTML =
-          '<aside class="menu column is-one-fifth">' +
-          '<ul class="menu-list">' +
-          '<li><a onclick="teach_assist()">' +
-          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-          '</a></li>' +
-          '<li><a onclick="find_the_rock()">' +
-          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-          '</a></li>' +
-          '<li><a onclick="klotski()">' +
-          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-          '</a></li>' +
-          '<li><a class="is-active">' +
-          '<div class="selected" style="font-size: .9vw;">Traveler</div>' +
-          '</a></li>' +
-          '<li><a onclick="skyline()">' +
-          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-          '</a></li>' +
-          '</ul>' +
-          '</aside>' +
-          '<div class="column is-four-fifths">' +
-          '<div class="columns is-multiline fade-in" id="experience_details">' +
-          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-          'Full-Stack Software Developer at Traveler' +
-          '</span>' +
-          '<div class="column is-full text" style="font-size: .9vw;">' +
-          '<li class="wrap bullet_list">' +
-          'Worked with a team of three other developers.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Led the team in team meetings, delegating tasks, and setting up times for troubleshooting. ' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Developed and maintained the database for the Traveler web application.' +
-          '</li>' +
-          '</div>' +
-          '</div>' +
-          '</div>';
-      }
-
-      function skyline() {
-        document.getElementById("experience_menu").innerHTML =
-          '<aside class="menu column is-one-fifth">' +
-          '<ul class="menu-list">' +
-          '<li><a onclick="teach_assist()">' +
-          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-          '</a></li>' +
-          '<li><a onclick="find_the_rock()">' +
-          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-          '</a></li>' +
-          '<li><a onclick="klotski()">' +
-          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-          '</a></li>' +
-          '<li><a onclick="traveler()">' +
-          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-          '</a></li>' +
-          '<li><a class="is-active">' +
-          '<div class="selected" style="font-size: .9vw;">Skyline HS</div>' +
-          '</a></li>' +
-          '</ul>' +
-          '</aside>' +
-          '<div class="column is-four-fifths">' +
-          '<div class="columns is-multiline fade-in" id="experience_details">' +
-          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-          'Mathematics Teacher at Skyline High School' +
-          '</span>' +
-          '<div class="column is-full text" style="font-size: .9vw;">' +
-          '<li class="wrap bullet_list">' +
-          'Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Cooperated with teacher, parents, and students to ensure student success.' +
-          '</li>' +
-          '<br>' +
-          '<li class="wrap bullet_list">' +
-          'Helped groups of students reach their mathematics goals.' +
-          '</li>' +
-          '</div>' +
-          '</div>' +
-          '</div>';
-      }
-    </script>
-
   </div>
-</div>
 
-<!--Projects-->
-<div class="column is-section is-full" style="margin-bottom: 12cm;">
-  <div id="projects">
+  <!--Projects-->
+  <div class="column is-section is-full" style="margin-bottom: 12cm;">
+    <div id="projects">
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-full">
+          <div class="columns is-4">
+            <div class="column"></div>
+            <p class="title is-full">Projects</p>
+          </div>
+        </div>
+        <br><br>
+
+        <!--Teach Assist-->
+        <div class="column is-half" id="teach_assist">
+          <div class="columns">
+            <div class="column is-three-fifths" style="position: absolute;">
+              <a href="http://teach-assist.com" target="_blank">
+                <figure class="">
+                  <img class="project-img" src="{% static 'chucksite/images/teachassist.JPG' %}" alt="Image not found">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-full">
+              <div class="columns is-centered project">
+                Teach Assist
+              </div>
+            </div>
+            <div class="column is-full">
+              <p>
+                Teachers need easy ways to find resources for the classroom, be able to assess their students quickly, and find ways to engage their classroom.
+                With Teach Assist teachers are able to create quizzes for their students, share engaging games with their classroom, and connect with a network of other teachers.
+              </p>
+            </div>
+            <div class="column is-one-third">
+              <a href="http://teach-assist.com" target="_blank">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://youtube.com" target="_blank">
+                <figure class="image container is-96x96">
+                  <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://github.com/chuckthemole/TeachAssist" target="_blank" style="justify-content: center;">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-full"></div>
+
+        <!--Find The Rock-->
+        <div class="column is-half" id="find_the_rock">
+          <div class="columns">
+            <div class="column is-three-fifths" style="position: absolute;">
+              <a href="http://www.therock.charles-pikaart-thomas.com" target="_blank">
+                <figure class="">
+                  <img class="project-img" src="{% static 'chucksite/images/find_the_rock.PNG' %}" alt="Image not found">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-full">
+              <div class="columns is-centered project">
+                Find The Rock
+              </div>
+            </div>
+            <div class="column is-full">
+              <p>
+                Find a location to play basketball, tennis, or baseball near you. With Find The Rock users are able to add locations or find locations to play their favorite sport.
+              </p>
+            </div>
+            <div class="column is-one-third">
+              <a href="http://www.therock.charles-pikaart-thomas.com" target="_blank">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://youtube.com" target="_blank">
+                <figure class="image container is-96x96">
+                  <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://github.com/chuckthemole/theRock" target="_blank" style="justify-content: center;">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-full"></div>
+
+        <!--Klotski-->
+        <div class="column is-half" id="klotski">
+          <div class="columns">
+            <div class="column is-three-fifths" style="position: absolute;">
+              <a href="google.com" target="_blank">
+                <figure class="">
+                  <img class="project-img" src="{% static 'chucksite/images/klotski.PNG' %}" alt="Image not found">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-full">
+              <div class="columns is-centered project">
+                Klotski
+              </div>
+            </div>
+            <div class="column is-full">
+              <p>
+                A version of the sliding block puzzle game, Klotski. Solve the puzzle by getting the big block through the bottom gate or press the solve button to be shown the way.
+              </p>
+            </div>
+            <div class="column is-one-third">
+              <a href="" target="_blank">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="youtube">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://youtube.com" target="_blank">
+                <figure class="image container is-96x96">
+                  <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://youtube.com" target="_blank" style="justify-content: center;">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-full"></div>
+
+        <!--Traveler-->
+        <div class="column is-half" id="contact_list">
+          <div class="columns">
+            <div class="column is-three-fifths" style="position: absolute;">
+              <a href="https://traveler-final-project.herokuapp.com" target="_blank">
+                <figure class="">
+                  <img class="project-img" src="{% static 'chucksite/images/traveler.PNG' %}" alt="Image not found">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-full">
+              <div class="columns is-centered project">
+                Traveler
+              </div>
+            </div>
+            <div class="column is-full">
+              <p>
+                Traveler helps people find interesting places to visit on their travels. Users can sign up as a local or traveler. Give others help finding fun destinations.
+              </p>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://traveler-final-project.herokuapp.com" target="_blank">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://youtube.com" target="_blank">
+                <figure class="image container is-96x96">
+                  <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+                </figure>
+              </a>
+            </div>
+            <div class="column is-one-third">
+              <a href="https://github.com/chuckthemole/traveler_software_engineering" target="_blank" style="justify-content: center;">
+                <figure class="image container is-32x32">
+                  <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+                </figure>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-full"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-section is-full" id="contact" style="margin-bottom: 2cm;">
+    <div class="columns is-multiline is-centered">
+      <p class="title column is-full has-text-centered">Contact</p>
+      <div class="column is-one-quarter"></div>
+      <p class="column is-two-fifths text is-size-5 has-text-justified">
+        I am currently looking for new opportunities. I would like to
+        learn new skills, work on a collaborative team, and have fun with the
+        work I do. Feel free to contact me for other reasons, too!
+      </p>
+      <div class="column is-one-quarter"></div>
+      <div class="column if-full">
+        <div class="columns is-centered">
+          <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Cats-->
+  <div class="column is-section" id="cats" style="margin-top: 6cm;">
     <div class="columns is-multiline">
-      <div class="column is-full">
-        <div class="columns is-4">
-          <div class="column"></div>
-          <p class="title is-full">Projects</p>
-        </div>
+      <p class="column is-full has-text-centered is-size-1 charles">Biscuit & Basil</p>
+      <div class="column is half">
+        <center>
+          <figure class="image container is-256x256">
+            <img class="cats-img" src="{% static 'chucksite/images/biscuit.JPG' %}" alt="biscuit" style="height: 420px">
+          </figure>
+        </center>
       </div>
-      <br><br>
-
-      <!--Teach Assist-->
-      <div class="column is-half" id="teach_assist">
-        <div class="columns">
-          <div class="column is-three-fifths" style="position: absolute;">
-            <a href="http://teach-assist.com" target="_blank">
-              <figure class="">
-                <img class="project-img" src="{% static 'chucksite/images/teachassist.JPG' %}" alt="Image not found">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
-        <div class="columns is-multiline">
-          <div class="column is-full">
-            <div class="columns is-centered project">
-              Teach Assist
-            </div>
-          </div>
-          <div class="column is-full">
-            <p>
-              Teachers need easy ways to find resources for the classroom, be able to assess their students quickly, and find ways to engage their classroom.
-              With Teach Assist teachers are able to create quizzes for their students, share engaging games with their classroom, and connect with a network of other teachers.
-            </p>
-          </div>
-          <div class="column is-one-third">
-            <a href="http://teach-assist.com" target="_blank">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://youtube.com" target="_blank">
-              <figure class="image container is-96x96">
-                <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://github.com/chuckthemole/TeachAssist" target="_blank" style="justify-content: center;">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-full"></div>
-
-      <!--Find The Rock-->
-      <div class="column is-half" id="find_the_rock">
-        <div class="columns">
-          <div class="column is-three-fifths" style="position: absolute;">
-            <a href="http://www.therock.charles-pikaart-thomas.com" target="_blank">
-              <figure class="">
-                <img class="project-img" src="{% static 'chucksite/images/find_the_rock.PNG' %}" alt="Image not found">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
-        <div class="columns is-multiline">
-          <div class="column is-full">
-            <div class="columns is-centered project">
-              Find The Rock
-            </div>
-          </div>
-          <div class="column is-full">
-            <p>
-              Find a location to play basketball, tennis, or baseball near you. With Find The Rock users are able to add locations or find locations to play their favorite sport.
-            </p>
-          </div>
-          <div class="column is-one-third">
-            <a href="http://www.therock.charles-pikaart-thomas.com" target="_blank">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://youtube.com" target="_blank">
-              <figure class="image container is-96x96">
-                <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://github.com/chuckthemole/theRock" target="_blank" style="justify-content: center;">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-full"></div>
-
-      <!--Klotski-->
-      <div class="column is-half" id="klotski">
-        <div class="columns">
-          <div class="column is-three-fifths" style="position: absolute;">
-            <a href="google.com" target="_blank">
-              <figure class="">
-                <img class="project-img" src="{% static 'chucksite/images/klotski.PNG' %}" alt="Image not found">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
-        <div class="columns is-multiline">
-          <div class="column is-full">
-            <div class="columns is-centered project">
-              Klotski
-            </div>
-          </div>
-          <div class="column is-full">
-            <p>
-              A version of the sliding block puzzle game, Klotski. Solve the puzzle by getting the big block through the bottom gate or press the solve button to be shown the way.
-            </p>
-          </div>
-          <div class="column is-one-third">
-            <a href="" target="_blank">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="youtube">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://youtube.com" target="_blank">
-              <figure class="image container is-96x96">
-                <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://youtube.com" target="_blank" style="justify-content: center;">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-full"></div>
-
-      <!--Traveler-->
-      <div class="column is-half" id="contact_list">
-        <div class="columns">
-          <div class="column is-three-fifths" style="position: absolute;">
-            <a href="https://traveler-final-project.herokuapp.com" target="_blank">
-              <figure class="">
-                <img class="project-img" src="{% static 'chucksite/images/traveler.PNG' %}" alt="Image not found">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
-        <div class="columns is-multiline">
-          <div class="column is-full">
-            <div class="columns is-centered project">
-              Traveler
-            </div>
-          </div>
-          <div class="column is-full">
-            <p>
-              Traveler description
-            </p>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://traveler-final-project.herokuapp.com" target="_blank">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://youtube.com" target="_blank">
-              <figure class="image container is-96x96">
-                <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-              </figure>
-            </a>
-          </div>
-          <div class="column is-one-third">
-            <a href="https://github.com/chuckthemole/traveler_software_engineering" target="_blank" style="justify-content: center;">
-              <figure class="image container is-32x32">
-                <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
-              </figure>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-full"></div>
-
-    </div>
-  </div>
-</div>
-
-<div class="column is-section is-full" id="contact" style="margin-bottom: 2cm;">
-  <div class="columns is-multiline is-centered">
-    <p class="title column is-full has-text-centered">Contact</p>
-    <div class="column is-one-quarter"></div>
-    <p class="column is-two-fifths text is-size-5 has-text-justified">
-      I am currently looking for new opportunities. I would like to
-      learn new skills, work on a collaborative team, and have fun with the
-      work I do. Feel free to contact me for other reasons, too!
-    </p>
-    <div class="column is-one-quarter"></div>
-    <div class="column if-full">
-      <div class="columns is-centered">
-        <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com">Get in touch</a>
+      <div class="column is half">
+        <center>
+          <figure class="image container is-256x256">
+            <img class="cats-img" src="{% static 'chucksite/images/basil.JPG' %}" alt="basil" style="height: 420px">
+          </figure>
+        </center>
       </div>
     </div>
   </div>
-</div>
 
-<!--Cats-->
-<div class="column is-section" id="cats" style="margin-top: 6cm;">
-  <div class="columns is-multiline">
-    <p class="column is-full has-text-centered is-size-1 charles">Biscuit & Basil</p>
-    <div class="column is half">
-      <center>
-        <figure class="image container is-256x256">
-          <img class="cats-img" src="{% static 'chucksite/images/biscuit.JPG' %}" alt="biscuit" style="height: 420px">
-        </figure>
-      </center>
-    </div>
-    <div class="column is half">
-      <center>
-        <figure class="image container is-256x256">
-          <img class="cats-img" src="{% static 'chucksite/images/basil.JPG' %}" alt="basil" style="height: 420px">
-        </figure>
-      </center>
-    </div>
-  </div>
-</div>
-
-<div class="column is-full"></div>
+  <div class="column is-full"></div>
 
 
 
-{% endblock content %}
+  {% endblock content %}
