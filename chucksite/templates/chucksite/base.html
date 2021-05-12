@@ -23,16 +23,15 @@
   </script>
 
   {% load static %}
-  <nav id="navbar" class="navbar is-fixed-top is-primary main-navigation">
+  <nav id="navbar" class="navbar is-fixed-top is-primary main-navigation" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#home">
         <img class="nav-icon" src="{% static 'chucksite/images/cpt_icon_small.PNG' %}" alt="CPT">
       </a>
-      <div class="navbar-burger">
-        <span>
-        </span>
-        <span></span>
-        <span></span>
+      <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </div>
     </div>
 
@@ -93,6 +92,20 @@
   </nav>
 
   <script type="text/javascript">
+    $(document).ready(function() {
+
+      // Check for click events on the navbar burger icon
+      $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
@@ -106,7 +119,7 @@
     }
   </script>
 
-  <div class="columns">
+  <div class="columns is-mobile">
 
     <div class="menu column is-1 sidebar">
       <div class="columns is-multiline" style="height: 85vh;">
