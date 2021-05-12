@@ -91,6 +91,28 @@
     </div>
   </nav>
 
+  {% if request.user_agent.is_mobile %}
+  <nav class="navbar is-link is-fixed-bottom" role="navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item is-expanded" href="https://github.com/chuckthemole" target="_blank">
+        <figure>
+          <img src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+        </figure>
+      </a>
+      <a class="navbar-item is-expanded" href="https://www.linkedin.com/in/chuckthemole/" target="_blank">
+        <figure>
+          <img src="{% static 'chucksite/images/linkedin_icon_new.PNG' %}" alt="Linkedin" width="30px" height="30px">
+        </figure>
+      </a>
+      <a class="navbar-item is-expanded" href="#cats">
+        <figure>
+          <img src="{% static 'chucksite/images/cat_icon.PNG' %}" alt="cats" width="30px" height="30px">
+        </figure>
+      </a>
+    </div>
+  </nav>
+  {% endif %}
+
   <script type="text/javascript">
     $(document).ready(function() {
 
