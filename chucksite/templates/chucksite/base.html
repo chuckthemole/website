@@ -37,48 +37,48 @@
 
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="#aboutme">
+        <a class="navbar-item navbar-click" href="#aboutme">
           About
         </a>
-        <a class="navbar-item" href="#experience">
+        <a class="navbar-item navbar-click" href="#experience">
           Experience
         </a>
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div class="navbar-item has-dropdown is-hoverable navbar-click">
           <a class="navbar-link" href="#projects">
             Projects
           </a>
-          <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" href="#teach_assist">
+          <div class="navbar-dropdown is-boxed navbar-click">
+            <a class="navbar-item navbar-click" href="#teach_assist">
               Teach Assist
             </a>
-            <a class="navbar-item" href="#find_the_rock">
+            <a class="navbar-item navbar-click" href="#find_the_rock">
               Find The Rock
             </a>
-            <a class="navbar-item" href="#klotski">
+            <a class="navbar-item navbar-click" href="#klotski">
               Klotski
             </a>
-            <a class="navbar-item" href="#mtg">
+            <a class="navbar-item navbar-click" href="#mtg">
               MTG Analysis
             </a>
-            <a class="navbar-item" href="#contact_list">
+            <a class="navbar-item navbar-click" href="#contact_list">
               Contact List
             </a>
-            <a class="navbar-item" href="#traveler">
+            <a class="navbar-item navbar-click" href="#traveler">
               Traveler
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item" href="#projects">
+            <a class="navbar-item navbar-click" href="#projects">
               View Projects
             </a>
           </div>
         </div>
-        <a class="navbar-item" href="#contact">
+        <a class="navbar-item navbar-click" href="#contact">
           Contact
         </a>
       </div>
 
       <div class="navbar-end">
-        <div class="navbar-item">
+        <div class="navbar-item navbar-click">
           <a class="button is-primary is-outlined" href="mailto:chuckthemole@gmail.com" target="_blank">
             email
           </a>
@@ -127,6 +127,13 @@
         $(".navbar-menu").toggleClass("is-active");
 
       });
+
+      $(".navbar-click").click(function() {
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+      });
+
     });
   </script>
 
@@ -174,7 +181,7 @@
     </div>
     {% endif %}
 
-    <section class="section container column">
+    <section class="section container column" style="margin-bottom: 3cm;">
       {% block content %}{% endblock content %}
       <a href="https://github.com/chuckthemole/website" target="_blank">
         <div class="my-footer has-text-centered">Website built by Charles Thomas</div>
