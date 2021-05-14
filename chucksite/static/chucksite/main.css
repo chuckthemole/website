@@ -170,9 +170,15 @@ img {
 }
 
 .is-section {
-  padding-top: 0px;
+  padding-top: 80px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.is-section-mobile {
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .main {
@@ -194,6 +200,19 @@ html {
 
 .small-text {
   font-size: 1.6vw;
+}
+
+/*Text sizes*/
+.large-text-mobile {
+  font-size: 8vw;
+}
+
+.medium-text-mobile {
+  font-size: 4vw;
+}
+
+.small-text-mobile {
+  font-size: 3vw;
 }
 
 /*Added CSS code Charles Thomas*/

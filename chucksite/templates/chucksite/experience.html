@@ -3,290 +3,339 @@
 {% load static %}
 
 <!--Experience-->
+
+{% if not request.user_agent.is_mobile %}
 <div class="columns is-section is-full is-multiline is-mobile is-centered" id="experience" style="margin-bottom: 12cm;">
   <p class="title column is-full has-text-centered">Projects & Work Experience</p>
-
-  {% if request.user_agent.is_mobile %}
   <div class="column is-full box alt-background-color">
-    <div class="columns is-vcentered is-mobile is-centered" id="experience_menu" style="width: 75vw; height: 30vw;">
-      {% else %}
-      <div class="column is-full box alt-background-color">
-        <div class="columns  is-vcentered is-mobile" id="experience_menu" style="width: 50vw; height: 20vw;">
-          {% endif %}
-          <!--https://bulma.io/documentation/components/menu/-->
-          <aside class="menu column is-one-fifth">
-            <ul class="menu-list">
-              <li><a class="is-active">
-                  <div class="selected" style="font-size: .9vw;">Teach Assist</div>
-                </a></li>
-              <li><a onclick="find_the_rock()">
-                  <div class="text" style="font-size: .9vw;">Find The Rock</div>
-                </a></li>
-              <li><a onclick="klotski()">
-                  <div class="text" style="font-size: .9vw;">Klotski</div>
-                </a></li>
-              <li><a onclick="traveler()">
-                  <div class="text" style="font-size: .9vw;">Traveler</div>
-                </a></li>
-              <li><a onclick="skyline()">
-                  <div class="text" style="font-size: .9vw;">Skyline HS</div>
-                </a></li>
-            </ul>
-          </aside>
-          <div class="column is-four-fifths">
-            <div class="columns is-multiline" id="experience_details">
-              <span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">
-                Full-Stack Software Developer at Teach Assist
-              </span>
-              <div class="column is-full text" style="font-size: .9vw;">
-                <li class="wrap bullet_list">
-                  Code, develop, and maintain a Django web application focused for teacher and student use.
-                </li>
-                <br>
-                <li class="wrap bullet_list">
-                  Write in a variety of different languages, develop an ORM layer to interact with
-                  the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
-                  web applications.
-                </li>
-                <br>
-                <li class="wrap bullet_list">
-                  Communicate with teams in order to test, survey, and receive feedback on
-                  the web application's features.
-                </li>
-              </div>
+    <div class="columns  is-vcentered is-mobile" id="experience_menu" style="width: 50vw; height: 20vw;">
+
+      <!--https://bulma.io/documentation/components/menu/-->
+      <aside class="menu column is-one-fifth">
+        <ul class="menu-list">
+          <li><a class="is-active">
+              <div class="selected" style="font-size: .9vw;">Teach Assist</div>
+            </a></li>
+          <li><a onclick="find_the_rock()">
+              <div class="text" style="font-size: .9vw;">Find The Rock</div>
+            </a></li>
+          <li><a onclick="klotski()">
+              <div class="text" style="font-size: .9vw;">Klotski</div>
+            </a></li>
+          <li><a onclick="traveler()">
+              <div class="text" style="font-size: .9vw;">Traveler</div>
+            </a></li>
+          <li><a onclick="skyline()">
+              <div class="text" style="font-size: .9vw;">Skyline HS</div>
+            </a></li>
+        </ul>
+      </aside>
+      <div class="column is-four-fifths">
+        <div class="columns is-multiline" id="experience_details">
+          <span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">
+            Full-Stack Software Developer at Teach Assist
+          </span>
+          <div class="column is-full text" style="font-size: .9vw;">
+            <li class="wrap bullet_list">
+              Code, develop, and maintain a Django web application focused for teacher and student use.
+            </li>
+            <br>
+            <li class="wrap bullet_list">
+              Write in a variety of different languages, develop an ORM layer to interact with
+              the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
+              web applications.
+            </li>
+            <br>
+            <li class="wrap bullet_list">
+              Communicate with teams in order to test, survey, and receive feedback on
+              the web application's features.
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="columns is-section-mobile is-full is-multiline is-mobile is-centered" id="experience" style="margin-bottom: 12cm;">
+    <p class="title column is-full has-text-centered">Projects & Work Experience</p>
+    <div class="column is-full box alt-background-color">
+      <div class="columns is-vcentered is-mobile is-centered" id="experience_menu" style="width: 75vw; height: 30vw;">
+        <!--https://bulma.io/documentation/components/menu/-->
+        <aside class="menu column is-one-fifth">
+          <ul class="menu-list">
+            <li><a class="is-active">
+                <div class="selected" style="font-size: .9vw;">Teach Assist</div>
+              </a></li>
+            <li><a onclick="find_the_rock()">
+                <div class="text" style="font-size: .9vw;">Find The Rock</div>
+              </a></li>
+            <li><a onclick="klotski()">
+                <div class="text" style="font-size: .9vw;">Klotski</div>
+              </a></li>
+            <li><a onclick="traveler()">
+                <div class="text" style="font-size: .9vw;">Traveler</div>
+              </a></li>
+            <li><a onclick="skyline()">
+                <div class="text" style="font-size: .9vw;">Skyline HS</div>
+              </a></li>
+          </ul>
+        </aside>
+        <div class="column is-four-fifths">
+          <div class="columns is-multiline" id="experience_details">
+            <span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">
+              Full-Stack Software Developer at Teach Assist
+            </span>
+            <div class="column is-full text" style="font-size: .9vw;">
+              <li class="wrap bullet_list">
+                Code, develop, and maintain a Django web application focused for teacher and student use.
+              </li>
+              <br>
+              <li class="wrap bullet_list">
+                Write in a variety of different languages, develop an ORM layer to interact with
+                the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
+                web applications.
+              </li>
+              <br>
+              <li class="wrap bullet_list">
+                Communicate with teams in order to test, survey, and receive feedback on
+                the web application's features.
+              </li>
             </div>
           </div>
         </div>
       </div>
-
-      <script src="jquery.js"></script>
-
-      <script>
-        function not_working() {
-          $("#experience_menu").load("hello");
-        }
-      </script>
-
-      <script>
-        function teach_assist() {
-          document.getElementById("experience_menu").innerHTML =
-            '<aside class="menu column is-one-fifth">' +
-            '<ul class="menu-list">' +
-            '<li><a class="is-active">' +
-            '<div class="selected" style="font-size: .9vw;">Teach Assist</div>' +
-            '</a></li>' +
-            '<li><a onclick="find_the_rock()">' +
-            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-            '</a></li>' +
-            '<li><a onclick="klotski()">' +
-            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-            '</a></li>' +
-            '<li><a onclick="traveler()">' +
-            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-            '</a></li>' +
-            '<li><a onclick="skyline()">' +
-            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-            '</a></li>' +
-            '</ul>' +
-            '</aside>' +
-            '<div class="column is-four-fifths">' +
-            '<div class="columns is-multiline fade-in" id="experience_details">' +
-            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-            'Full-Stack Software Developer at Teach Assist' +
-            '</span>' +
-            '<div class="column is-full text" style="font-size: .9vw;">' +
-            '<li class="wrap bullet_list">' +
-            'Code, develop, and maintain a Django web application focused for teacher and student use.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Write in a variety of different languages, develop an ORM layer to interact with ' +
-            'the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy ' +
-            'web applications.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Communicate with teams in order to test, survey, and receive feedback on ' +
-            "the web application's features." +
-            '</li>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        }
-
-        function find_the_rock() {
-          var text = document.getElementById('experience_details');
-          text.classList.add('fade-out');
-
-          document.getElementById("experience_menu").innerHTML =
-            '<aside class="menu column is-one-fifth">' +
-            '<ul class="menu-list">' +
-            '<li><a onclick="teach_assist()">' +
-            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-            '</a></li>' +
-            '<li><a class="is-active">' +
-            '<div class="selected" style="font-size: .9vw;">Find The Rock</div>' +
-            '</a></li>' +
-            '<li><a onclick="klotski()">' +
-            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-            '</a></li>' +
-            '<li><a onclick="traveler()">' +
-            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-            '</a></li>' +
-            '<li><a onclick="skyline()">' +
-            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-            '</a></li>' +
-            '</ul>' +
-            '</aside>' +
-            '<div class="column is-four-fifths">' +
-            '<div class="columns is-multiline fade-in" id="experience_details">' +
-            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-            'Full-Stack Software Developer at Find The Rock' +
-            '</span>' +
-            '<div class="column is-full text" style="font-size: .9vw;">' +
-            '<li class="wrap bullet_list">' +
-            'Developed and shipped an interactive web application allowing people to find nearby sports.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.' +
-            '</li>' +
-            '<br>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        }
-
-        function klotski() {
-          document.getElementById("experience_menu").innerHTML =
-            '<aside class="menu column is-one-fifth">' +
-            '<ul class="menu-list">' +
-            '<li><a onclick="teach_assist()">' +
-            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-            '</a></li>' +
-            '<li><a onclick="find_the_rock()">' +
-            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-            '</a></li>' +
-            '<li><a class="is-active">' +
-            '<div class="selected" style="font-size: .9vw;">Klotski</div>' +
-            '</a></li>' +
-            '<li><a onclick="traveler()">' +
-            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-            '</a></li>' +
-            '<li><a onclick="skyline()">' +
-            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-            '</a></li>' +
-            '</ul>' +
-            '</aside>' +
-            '<div class="column is-four-fifths">' +
-            '<div class="columns is-multiline fade-in" id="experience_details">' +
-            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-            'Full-Stack Software Developer at Klotski' +
-            '</span>' +
-            '<div class="column is-full text" style="font-size: .9vw;">' +
-            '<li class="wrap bullet_list">' +
-            'Developed a sliding block puzzle game in Java utilizing JavaFX.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Created features to automatically solve the game for players, undo moves, play music, and restart the game.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            "Maintain the application, document changes, and use source control to keep track of the application's lifespan. " +
-            '</li>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        }
-
-        function traveler() {
-          document.getElementById("experience_menu").innerHTML =
-            '<aside class="menu column is-one-fifth">' +
-            '<ul class="menu-list">' +
-            '<li><a onclick="teach_assist()">' +
-            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-            '</a></li>' +
-            '<li><a onclick="find_the_rock()">' +
-            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-            '</a></li>' +
-            '<li><a onclick="klotski()">' +
-            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-            '</a></li>' +
-            '<li><a class="is-active">' +
-            '<div class="selected" style="font-size: .9vw;">Traveler</div>' +
-            '</a></li>' +
-            '<li><a onclick="skyline()">' +
-            '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
-            '</a></li>' +
-            '</ul>' +
-            '</aside>' +
-            '<div class="column is-four-fifths">' +
-            '<div class="columns is-multiline fade-in" id="experience_details">' +
-            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-            'Full-Stack Software Developer at Traveler' +
-            '</span>' +
-            '<div class="column is-full text" style="font-size: .9vw;">' +
-            '<li class="wrap bullet_list">' +
-            'Worked with a team of three other developers.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Led the team in team meetings, delegating tasks, and setting up times for troubleshooting. ' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Developed and maintained the database for the Traveler web application.' +
-            '</li>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        }
-
-        function skyline() {
-          document.getElementById("experience_menu").innerHTML =
-            '<aside class="menu column is-one-fifth">' +
-            '<ul class="menu-list">' +
-            '<li><a onclick="teach_assist()">' +
-            '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
-            '</a></li>' +
-            '<li><a onclick="find_the_rock()">' +
-            '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
-            '</a></li>' +
-            '<li><a onclick="klotski()">' +
-            '<div class="text" style="font-size: .9vw;">Klotski</div>' +
-            '</a></li>' +
-            '<li><a onclick="traveler()">' +
-            '<div class="text" style="font-size: .9vw;">Traveler</div>' +
-            '</a></li>' +
-            '<li><a class="is-active">' +
-            '<div class="selected" style="font-size: .9vw;">Skyline HS</div>' +
-            '</a></li>' +
-            '</ul>' +
-            '</aside>' +
-            '<div class="column is-four-fifths">' +
-            '<div class="columns is-multiline fade-in" id="experience_details">' +
-            '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
-            'Mathematics Teacher at Skyline High School' +
-            '</span>' +
-            '<div class="column is-full text" style="font-size: .9vw;">' +
-            '<li class="wrap bullet_list">' +
-            'Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Cooperated with teacher, parents, and students to ensure student success.' +
-            '</li>' +
-            '<br>' +
-            '<li class="wrap bullet_list">' +
-            'Helped groups of students reach their mathematics goals.' +
-            '</li>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        }
-      </script>
-
     </div>
+    {% endif %}
 
-    {% endblock experience %}
+    <script src="jquery.js"></script>
+
+    <script>
+      function not_working() {
+        $("#experience_menu").load("hello");
+      }
+    </script>
+
+    <script>
+      function teach_assist() {
+        document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
+          '<ul class="menu-list">' +
+          '<li><a class="is-active">' +
+          '<div class="selected" style="font-size: .9vw;">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline fade-in" id="experience_details">' +
+          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+          'Full-Stack Software Developer at Teach Assist' +
+          '</span>' +
+          '<div class="column is-full text" style="font-size: .9vw;">' +
+          '<li class="wrap bullet_list">' +
+          'Code, develop, and maintain a Django web application focused for teacher and student use.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Write in a variety of different languages, develop an ORM layer to interact with ' +
+          'the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy ' +
+          'web applications.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Communicate with teams in order to test, survey, and receive feedback on ' +
+          "the web application's features." +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }
+
+      function find_the_rock() {
+        var text = document.getElementById('experience_details');
+        text.classList.add('fade-out');
+
+        document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="selected" style="font-size: .9vw;">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline fade-in" id="experience_details">' +
+          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+          'Full-Stack Software Developer at Find The Rock' +
+          '</span>' +
+          '<div class="column is-full text" style="font-size: .9vw;">' +
+          '<li class="wrap bullet_list">' +
+          'Developed and shipped an interactive web application allowing people to find nearby sports.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.' +
+          '</li>' +
+          '<br>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }
+
+      function klotski() {
+        document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="selected" style="font-size: .9vw;">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline fade-in" id="experience_details">' +
+          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+          'Full-Stack Software Developer at Klotski' +
+          '</span>' +
+          '<div class="column is-full text" style="font-size: .9vw;">' +
+          '<li class="wrap bullet_list">' +
+          'Developed a sliding block puzzle game in Java utilizing JavaFX.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Created features to automatically solve the game for players, undo moves, play music, and restart the game.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          "Maintain the application, document changes, and use source control to keep track of the application's lifespan. " +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }
+
+      function traveler() {
+        document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="selected" style="font-size: .9vw;">Traveler</div>' +
+          '</a></li>' +
+          '<li><a onclick="skyline()">' +
+          '<div class="text" style="font-size: .9vw;">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline fade-in" id="experience_details">' +
+          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+          'Full-Stack Software Developer at Traveler' +
+          '</span>' +
+          '<div class="column is-full text" style="font-size: .9vw;">' +
+          '<li class="wrap bullet_list">' +
+          'Worked with a team of three other developers.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Led the team in team meetings, delegating tasks, and setting up times for troubleshooting. ' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Developed and maintained the database for the Traveler web application.' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }
+
+      function skyline() {
+        document.getElementById("experience_menu").innerHTML =
+          '<aside class="menu column is-one-fifth">' +
+          '<ul class="menu-list">' +
+          '<li><a onclick="teach_assist()">' +
+          '<div class="text" style="font-size: .9vw;">Teach Assist</div>' +
+          '</a></li>' +
+          '<li><a onclick="find_the_rock()">' +
+          '<div class="text" style="font-size: .9vw;">Find The Rock</div>' +
+          '</a></li>' +
+          '<li><a onclick="klotski()">' +
+          '<div class="text" style="font-size: .9vw;">Klotski</div>' +
+          '</a></li>' +
+          '<li><a onclick="traveler()">' +
+          '<div class="text" style="font-size: .9vw;">Traveler</div>' +
+          '</a></li>' +
+          '<li><a class="is-active">' +
+          '<div class="selected" style="font-size: .9vw;">Skyline HS</div>' +
+          '</a></li>' +
+          '</ul>' +
+          '</aside>' +
+          '<div class="column is-four-fifths">' +
+          '<div class="columns is-multiline fade-in" id="experience_details">' +
+          '<span class="column is-full charles" style="white-space: no-wrap; font-size: 1.5vw;">' +
+          'Mathematics Teacher at Skyline High School' +
+          '</span>' +
+          '<div class="column is-full text" style="font-size: .9vw;">' +
+          '<li class="wrap bullet_list">' +
+          'Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Cooperated with teacher, parents, and students to ensure student success.' +
+          '</li>' +
+          '<br>' +
+          '<li class="wrap bullet_list">' +
+          'Helped groups of students reach their mathematics goals.' +
+          '</li>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }
+    </script>
+
+  </div>
+
+  {% endblock experience %}
