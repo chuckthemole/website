@@ -1,0 +1,34 @@
+{% block cats %}
+
+{% load static %}
+
+<!--Cats-->
+<div class="column is-section" id="cats" style="margin-top: 6cm;">
+  <div class="columns is-multiline is-mobile">
+    <p class="column is-full has-text-centered title">Biscuit & Basil</p>
+    <div class="column is half">
+      <center>
+        {% if request.user_agent.is_mobile %}
+        <figure class="image container is-48X48">
+          {% else %}
+          <figure class="image container is-256x256">
+            {% endif %}
+            <img class="cats-img" src="{% static 'chucksite/images/biscuit.JPG' %}" alt="biscuit" style="height: 20vw;">
+          </figure>
+      </center>
+    </div>
+    <div class="column is half">
+      <center>
+        {% if request.user_agent.is_mobile %}
+        <figure class="image container is-48X48">
+          {% else %}
+          <figure class="image container is-256x256">
+            {% endif %}
+            <img class="cats-img" src="{% static 'chucksite/images/basil.JPG' %}" alt="basil" style="height: 20vw;">
+          </figure>
+      </center>
+    </div>
+  </div>
+</div>
+
+{% endblock cats %}

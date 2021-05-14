@@ -1,0 +1,45 @@
+{% block projects %}
+
+{% load static %}
+
+<!--Projects-->
+<div class="column is-section is-full" style="margin-bottom: 12cm;">
+  <div id="projects">
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-full">
+        <div class="columns is-4">
+          <div class="column"></div>
+          <p class="title is-full">Projects</p>
+        </div>
+      </div>
+      <br><br>
+
+      {% block teach_assist %}
+      {% include "chucksite/projects/teach_assist.html" %}
+      {% endblock %}
+
+      {% block rock %}
+      {% include "chucksite/projects/find_the_rock.html" %}
+      {% endblock %}
+
+      {% block klotski %}
+      {% include "chucksite/projects/klotski.html" %}
+      {% endblock %}
+
+      {% block mtg %}
+      {% include "chucksite/projects/MTG_analysis.html" %}
+      {% endblock %}
+
+      {% block contact_list %}
+      {% include "chucksite/projects/contact_list.html" %}
+      {% endblock %}
+
+      {% block traveler %}
+      {% include "chucksite/projects/traveler.html" %}
+      {% endblock %}
+
+    </div>
+  </div>
+</div>
+
+{% endblock projects %}

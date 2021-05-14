@@ -1,0 +1,62 @@
+{% block klotski %}
+
+{% load static %}
+
+<!--Klotski-->
+<div class="column is-half" id="klotski">
+  <div class="columns">
+    <div class="column is-three-fifths" style="position: absolute;">
+      <a href="{% static 'chucksite/projects/Klotski.zip' %}" download>
+        <figure class="">
+          <img class="project-img" src="{% static 'chucksite/images/klotski.PNG' %}" alt="Image not found">
+        </figure>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="column box alt-background-color text is-size-6 has-text-justified shadow" style="margin-bottom: 10cm; margin-top: 2cm;">
+  <div class="columns is-multiline is-mobile">
+    <div class="column is-full">
+      <div class="columns is-centered project">
+        Klotski
+      </div>
+    </div>
+    <div class="column is-full">
+      {% if request.user_agent.is_mobile %}
+      <p class="small-text">
+        {% else %}
+      <p>
+        {% endif %}
+        A version of the sliding block puzzle game, Klotski. Solve the puzzle by getting the big block through the bottom gate or press the solve button to be shown the way.
+      </p>
+    </div>
+    <div class="column is-one-third">
+      <a href="{% static 'chucksite/projects/Klotski.zip' %}" download>
+        <figure class="image container is-32x32">
+          <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+        </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://youtube.com" target="_blank">
+        {% if request.user_agent.is_mobile %}
+        <figure class="image container">
+          {% else %}
+          <figure class="image container is-96x96">
+            {% endif %}
+            <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+          </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://github.com/chuckthemole/Klotski2021" target="_blank" style="justify-content: center;">
+        <figure class="image container is-32x32">
+          <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+        </figure>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock klotski %}

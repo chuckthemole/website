@@ -1,38 +1,39 @@
-
-{% extends "chucksite/base.html" %}
-
-{% block content %}
+{% block about %}
 
 {% load static %}
 
-<div style="margin: auto" class="tile is-8 is-parent">
-  <div class="tile is-child box" style="background-color:#fce8fa">
+<div class="columns is-section is-full is-multiline is-mobile" id="aboutme" style="margin-bottom: 12cm;">
+  <p class="title column is-full">About Me</p>
 
-    <p>
-      <div class="grid-cont" style="background-color:pink">
-        <div>
-          <img class="rounds imgShake" src="{% static 'chucksite/images/chuckpic.JPG' %}" alt=" icon">
-        </div>
-        <div >
-          <p class="hello">
-            Hello, my name is
-          </p>
-          <p class="charles">
-            Charles Thomas.
-          </p>
-          <p class='about w3-animate-bottom' style="color:#cc00cc" style='font-family: helvetica'>
-            I'm a student in Oakland, California<br>
-            currently pursuing my Master's in<br>
-            Interdisciplinary Computer Science at <br>
-            Mills College. My anticipated graduation <br>
-            date is December of 2020.
-          </p>
+  <hr style="height:20px;border-width:0;color:gray;background-color:gray">
 
-        </div>
-      </div>
-    </p>
-
+  <div class="column text small-text is-three-fifths has-text-justified">
+    Hi! My name is Charles. I enjoy creating software, developing applications,
+    analyzing data, and continually learning new technologies.
+    My interest in software began as a Math undergraduate student
+    and has continued to grow. Aside from developing I enjoy playing music
+    (guitar, piano, drums), bike riding, and playing basketball. <br><br>
+    I love to code in Java and Python but have experience with many technologies.
+    Here are some that I've been working with recently:
+    <div class="columns">
+      <div class="column is-full"></div>
+    </div>
+    <div class="columns small-text is-centered is-mobile">
+      <ul class="column is-two-fifths">
+        <li class="bullet_list">Django</li>
+        <li class="bullet_list">AWS</li>
+        <li class="bullet_list">Pandas</li>
+      </ul>
+      <ul class="column is-two-fifths">
+        <li class="bullet_list">CSS/HTML</li>
+        <li class="bullet_list">JavaScript</li>
+        <li class="bullet_list">Maven/Gradle</li>
+      </ul>
+    </div>
+  </div>
+  <div class="column is-two-fifths img-wrap" style="border-radius: 2%;">
+    <img class="chuck-img" src="{% static 'chucksite/images/chuck_bike.JPG' %}" alt="Chuck">
   </div>
 </div>
 
-{% endblock content %}
+{% endblock about %}
