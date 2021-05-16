@@ -1,0 +1,46 @@
+{% block traveler %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Traveler
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Worked with a team of three other developers as the team lead.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Led the team in meetings, delegating tasks, and setting up times for troubleshooting.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Developed and maintained the database for the Traveler web application.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Traveler
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Worked with a team of three other developers as the team lead.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Led the team in meetings, delegating tasks, and setting up times for troubleshooting.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Developed and maintained the database for the Traveler web application.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock traveler %}

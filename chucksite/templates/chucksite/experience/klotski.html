@@ -1,0 +1,46 @@
+{% block klotski %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Klotski
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Developed a sliding block puzzle game in Java utilizing JavaFX.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Created features to automatically solve the game for players, undo moves, play music, and restart the game.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Maintain the application, document changes, and use source control to keep track of the application's lifespan.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Klotski
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Developed a sliding block puzzle game in Java utilizing JavaFX.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Created features to automatically solve the game for players, undo moves, play music, and restart the game.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Maintain the application, document changes, and use source control to keep track of the application's lifespan.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock klotski %}

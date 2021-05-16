@@ -1,0 +1,46 @@
+{% block skyline %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Mathematics Teacher at Skyline High School
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Cooperated with teacher, parents, and students to ensure student success.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Helped groups of students reach their mathematics goals.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Mathematics Teacher at Skyline High School
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Designed and implemented lesson plans for grades 9-12 in Algebra and AP Statistics.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Cooperated with teacher, parents, and students to ensure student success.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Helped groups of students reach their mathematics goals.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock skyline %}

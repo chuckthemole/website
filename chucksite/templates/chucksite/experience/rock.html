@@ -1,0 +1,38 @@
+{% block find_the_rock %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Find The Rock
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Developed and shipped an interactive web application allowing people to find nearby sports.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Find The Rock
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Developed and shipped an interactive web application allowing people to find nearby sports.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Integrated Google Maps API, created AWS S3 buckets for dynamic image storage, and deployed using Heroku.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock find_the_rock %}

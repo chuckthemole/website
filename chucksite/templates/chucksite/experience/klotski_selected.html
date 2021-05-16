@@ -1,14 +1,14 @@
-{% block rock_selected %}
+{% block klotski_selected %}
 
 {% if request.user_agent.is_mobile %}
 <a class="column is-one-fifth" onclick="teach_assist()">
   <div class="text small-text-mobile">Teach Assist</div>
 </a>
-<a class="column is-one-fifth is-active">
-  <div class="selected small-text-mobile">Find The Rock</div>
+<a class="column is-one-fifth" onclick="find_the_rock()">
+  <div class="text small-text-mobile">Find The Rock</div>
 </a>
-<a class="column is-one-fifth" onclick="klotski()">
-  <div class="text small-text-mobile">Klotski</div>
+<a class="column is-one-fifth is-active">
+  <div class="selected small-text-mobile">Klotski</div>
 </a>
 <a class="column is-one-fifth" onclick="traveler()">
   <div class="text small-text-mobile">Traveler</div>
@@ -22,11 +22,11 @@
 <a class="column is-full" onclick="teach_assist()">
   <div class="text small-text">Teach Assist</div>
 </a>
-<a class="column is-full is-active">
-  <div class="selected small-text">Find The Rock</div>
+<a class="column is-full" onclick="find_the_rock()">
+  <div class="text small-text">Find The Rock</div>
 </a>
-<a class="column is-full" onclick="klotski()">
-  <div class="text small-text">Klotski</div>
+<a class="column is-full is-active">
+  <div class="selected small-text">Klotski</div>
 </a>
 <a class="column is-full" onclick="traveler()">
   <div class="text small-text">Traveler</div>
@@ -37,5 +37,5 @@
 
 {% endif %}
 
-{% endblock rock_selected %}
+{% endblock klotski_selected %}
 <!--https://bulma.io/documentation/components/menu/-->

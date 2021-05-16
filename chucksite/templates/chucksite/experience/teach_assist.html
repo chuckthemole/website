@@ -1,29 +1,52 @@
 {% block teach_assist %}
 
-{% load static %}
-
-<div class="column is-four-fifths">
-  <div class="columns is-multiline fade-in" id="experience_details">
-    <span class="column is-full charles small-text-mobile" style="white-space: no-wrap;">
-      Full-Stack Software Developer at Teach Assist
-    </span>
-    <div class="column is-full text small-text-mobile">
-      <li class="wrap bullet_list">
-        Code, develop, and maintain a Django web application focused for teacher and student use.
-      </li>
-      <br>
-      <li class="wrap bullet_list">
-        Write in a variety of different languages, develop an ORM layer to interact with
-        the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
-        web applications.
-      </li>
-      <br>
-      <li class="wrap bullet_list">
-        Communicate with teams in order to test, survey, and receive feedback on
-        the web application's features.
-      </li>
-    </div>
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Teach Assist
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Code, develop, and maintain a Django web application focused for teacher and student use.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Write in a variety of different languages, develop an ORM layer to interact with
+      the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
+      web applications.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Communicate with teams in order to test, survey, and receive feedback on
+      the web application's features.
+    </li>
   </div>
 </div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Full-Stack Software Developer at Teach Assist
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Code, develop, and maintain a Django web application focused for teacher and student use.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Write in a variety of different languages, develop an ORM layer to interact with
+      the PostgreSQL relational database, integrate AWS services to maintain, store, and deploy
+      web applications.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Communicate with teams in order to test, survey, and receive feedback on
+      the web application's features.
+    </li>
+  </div>
+</div>
+
+{% endif %}
 
 {% endblock teach_assist %}
