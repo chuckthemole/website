@@ -173,12 +173,14 @@ img {
   padding-top: 80px;
   padding-left: 40px;
   padding-right: 40px;
+  margin-top: 12cm;
 }
 
 .is-section-mobile {
   padding-top: 40px;
   padding-left: 5px;
   padding-right: 5px;
+  margin-bottom: 12cm;
 }
 
 .main {

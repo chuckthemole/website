@@ -8,30 +8,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-{% block intro %}
-{% include "chucksite/introduction.html" %}
-{% endblock %}
+<div id="home">
+  {% block intro %}
+  {% include "chucksite/introduction.html" %}
+  {% endblock %}
 
-{% block about %}
-{% include "chucksite/about.html" %}
-{% endblock %}
+  {% block about %}
+  {% include "chucksite/about.html" %}
+  {% endblock %}
 
-{% block experience %}
-{% include "chucksite/experience.html" %}
-{% endblock %}
+  {% block experience %}
+  {% include "chucksite/experience.html" %}
+  {% endblock %}
 
-{% block projects %}
-{% include "chucksite/projects.html" %}
-{% endblock %}
+  {% block projects %}
+  {% include "chucksite/projects.html" %}
+  {% endblock %}
 
-{% block contact %}
-{% include "chucksite/contact.html" %}
-{% endblock %}
+  {% block contact %}
+  {% include "chucksite/contact.html" %}
+  {% endblock %}
 
-{% block cats %}
-{% include "chucksite/cats.html" %}
-{% endblock %}
-
-<div class="columns is-full"></div>
+  {% block cats %}
+  {% include "chucksite/cats.html" %}
+  {% endblock %}
+</div>
 
 {% endblock content %}

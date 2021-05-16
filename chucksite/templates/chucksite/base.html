@@ -152,7 +152,6 @@
   </script>
 
   <div class="columns is-mobile">
-
     {% if not request.user_agent.is_mobile %}
     <div class="menu column is-1 sidebar">
       <div class="columns is-multiline" style="height: 85vh;">
@@ -181,11 +180,19 @@
     </div>
     {% endif %}
 
+    {% if not request.user_agent.is_mobile %}
     <section class="section container column" style="margin-bottom: 3cm;">
-      {% block content %}{% endblock content %}
-      <a href="https://github.com/chuckthemole/website" target="_blank">
-        <div class="my-footer has-text-centered">Website built by Charles Thomas</div>
-      </a>
+      {% else %}
+      <section class="section container column" style="margin-right: .5cm; margin-left: .5cm;">
+      {% endif %}
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-full" style="margin-bottom: 6cm;">
+          {% block content %}{% endblock content %}
+        </div>
+        <a class="column is-full" href="https://github.com/chuckthemole/website" target="_blank" style="margin-bottom: 3cm;">
+          <div class="my-footer has-text-centered">Website built by Charles Thomas</div>
+        </a>
+      </div>
     </section>
 
     {% if not request.user_agent.is_mobile %}
@@ -201,7 +208,6 @@
       </div>
     </div>
     {% endif %}
-
   </div>
 
 </body>
