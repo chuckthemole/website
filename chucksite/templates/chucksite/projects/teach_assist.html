@@ -32,6 +32,7 @@
         With Teach Assist teachers are able to create quizzes for their students, share engaging games with their classroom, and connect with a network of other teachers.
       </p>
     </div>
+    {% if request.user_agent.is_mobile %}
     <div class="column is-one-third">
       <a href="http://teach-assist.com" target="_blank">
         <figure class="image container is-32x32">
@@ -41,13 +42,9 @@
     </div>
     <div class="column is-one-third">
       <a href="https://youtube.com" target="_blank">
-        {% if request.user_agent.is_mobile %}
-        <figure class="image container">
-          {% else %}
-          <figure class="image container is-96x96">
-            {% endif %}
-            <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-          </figure>
+        <figure class="image container is-32x32">
+          <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+        </figure>
       </a>
     </div>
     <div class="column is-one-third">
@@ -57,6 +54,29 @@
         </figure>
       </a>
     </div>
+    {% else %}
+    <div class="column is-one-third">
+      <a href="http://teach-assist.com" target="_blank">
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+        </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://youtube.com" target="_blank">
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+        </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://github.com/chuckthemole/TeachAssist" target="_blank" style="justify-content: center;">
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+        </figure>
+      </a>
+    </div>
+    {% endif %}
   </div>
 </div>
 

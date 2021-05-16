@@ -31,6 +31,7 @@
         A version of the sliding block puzzle game, Klotski. Solve the puzzle by getting the big block through the bottom gate or press the solve button to be shown the way.
       </p>
     </div>
+    {% if request.user_agent.is_mobile %}
     <div class="column is-one-third">
       <a href="{% static 'chucksite/projects/Klotski.zip' %}" download>
         <figure class="image container is-32x32">
@@ -40,13 +41,9 @@
     </div>
     <div class="column is-one-third">
       <a href="https://youtube.com" target="_blank">
-        {% if request.user_agent.is_mobile %}
-        <figure class="image container">
-          {% else %}
-          <figure class="image container is-96x96">
-            {% endif %}
-            <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
-          </figure>
+        <figure class="image container is-32x32">
+          <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+        </figure>
       </a>
     </div>
     <div class="column is-one-third">
@@ -56,6 +53,29 @@
         </figure>
       </a>
     </div>
+    {% else %}
+    <div class="column is-one-third">
+      <a href="{% static 'chucksite/projects/Klotski.zip' %}" download>
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/link.PNG' %}" alt="link">
+        </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://youtube.com" target="_blank">
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/youtube.PNG' %}" alt="youtube">
+        </figure>
+      </a>
+    </div>
+    <div class="column is-one-third">
+      <a href="https://github.com/chuckthemole/Klotski2021" target="_blank" style="justify-content: center;">
+        <figure class="image container is-64x64">
+          <img class="imgShake" src="{% static 'chucksite/images/github_icon.PNG' %}" alt="github">
+        </figure>
+      </a>
+    </div>
+    {% endif %}
   </div>
 </div>
 
