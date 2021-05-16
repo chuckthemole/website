@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-<body class="fade-in">
+<body class="fade-in" id="home">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     function about() {
@@ -25,7 +25,7 @@
   {% load static %}
   <nav id="navbar" class="navbar is-fixed-top is-primary main-navigation" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#home">
+      <a class="navbar-item navbar-click-icon" href="#home">
         <img class="nav-icon" src="{% static 'chucksite/images/cpt_icon_small.PNG' %}" alt="CPT">
       </a>
       <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -134,6 +134,12 @@
 
       });
 
+      $(".navbar-click-icon").click(function() {
+        $(".navbar-burger").removeClass("is-active");
+        $(".navbar-menu").removeClass("is-active");
+
+      });
+
     });
   </script>
 
@@ -184,30 +190,34 @@
     <section class="section container column" style="margin-bottom: 3cm;">
       {% else %}
       <section class="section container column" style="margin-right: .5cm; margin-left: .5cm;">
-      {% endif %}
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-full" style="margin-bottom: 6cm;">
-          {% block content %}{% endblock content %}
-        </div>
-        <a class="column is-full" href="https://github.com/chuckthemole/website" target="_blank" style="margin-bottom: 3cm;">
-          <div class="my-footer has-text-centered">Website built by Charles Thomas</div>
-        </a>
-      </div>
-    </section>
-
-    {% if not request.user_agent.is_mobile %}
-    <div class="menu column is-1 sidebar">
-      <div class="columns is-centered is-multiline" style="height: 85vh;">
-        <div class="column is-full" style="margin-top: auto; padding: 0px;">
-          <div class="columns is-multiline">
-            <a class="column is-full email" href="mailto:chuckthemole@gmail.com">
-              chuckthemole@gmail.com
+        {% endif %}
+        <div class="columns is-multiline is-mobile">
+          <div class="column is-full" style="margin-bottom: 6cm;">
+            {% block content %}{% endblock content %}
+          </div>
+          {% if not request.user_agent.is_mobile %}
+          <a class="column is-full" href="https://github.com/chuckthemole/website" target="_blank">
+            {% else %}
+            <a class="column is-full" href="https://github.com/chuckthemole/website" target="_blank" style="margin-bottom: 2cm;">
+              {% endif %}
+              <div class="my-footer has-text-centered">Website built by Charles Thomas</div>
             </a>
+        </div>
+      </section>
+
+      {% if not request.user_agent.is_mobile %}
+      <div class="menu column is-1 sidebar">
+        <div class="columns is-centered is-multiline" style="height: 85vh;">
+          <div class="column is-full" style="margin-top: auto; padding: 0px;">
+            <div class="columns is-multiline">
+              <a class="column is-full email" href="mailto:chuckthemole@gmail.com">
+                chuckthemole@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    {% endif %}
+      {% endif %}
   </div>
 
 </body>

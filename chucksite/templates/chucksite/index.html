@@ -8,30 +8,85 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<div id="home">
+{% if not request.user_agent.is_mobile %}
+<div style="margin-bottom: 3cm;"></div>
+{% endif %}
+
+{% if not request.user_agent.is_mobile %}
+<div class="is-section">
   {% block intro %}
   {% include "chucksite/introduction.html" %}
   {% endblock %}
+</div>
 
+<div class="is-section">
   {% block about %}
   {% include "chucksite/about.html" %}
   {% endblock %}
+</div>
 
+<div class="is-section">
   {% block experience %}
   {% include "chucksite/experience.html" %}
   {% endblock %}
+</div>
 
+<div class="is-section">
   {% block projects %}
   {% include "chucksite/projects.html" %}
   {% endblock %}
+</div>
 
+<div class="is-section">
   {% block contact %}
   {% include "chucksite/contact.html" %}
   {% endblock %}
+</div>
 
+<div style="margin-bottom: -6cm;">
   {% block cats %}
   {% include "chucksite/cats.html" %}
   {% endblock %}
 </div>
+
+{% else %}
+
+<div class="is-section-mobile-intro">
+  {% block intro_mobile %}
+  {% include "chucksite/introduction.html" %}
+  {% endblock %}
+</div>
+
+<div class="is-section-mobile">
+  {% block about_mobile %}
+  {% include "chucksite/about.html" %}
+  {% endblock %}
+</div>
+
+<div class="is-section-mobile">
+  {% block experience_mobile %}
+  {% include "chucksite/experience.html" %}
+  {% endblock %}
+</div>
+
+<div class="is-section-mobile">
+  {% block projects_mobile %}
+  {% include "chucksite/projects.html" %}
+  {% endblock %}
+</div>
+
+<div class="is-section-mobile">
+  {% block contact_mobile %}
+  {% include "chucksite/contact.html" %}
+  {% endblock %}
+</div>
+
+<div style="margin-bottom: -6cm;">
+  {% block cats_mobile %}
+  {% include "chucksite/cats.html" %}
+  {% endblock %}
+</div>
+
+{% endif %}
 
 {% endblock content %}
