@@ -1,0 +1,27 @@
+{% block klotski_selected %}
+
+{% if request.user_agent.is_mobile %}
+<a class="column is-one-fifth" onclick="callisto()">
+  <div class="text small-text-mobile">Callisto Media</div>
+</a>
+<a class="column is-one-fifth is-active">
+  <div class="selected small-text-mobile">Mthree</div>
+</a>
+<a class="column is-one-fifth" onclick="mills()">
+  <div class="text small-text-mobile">Mills</div>
+</a>
+{% else %}
+
+<a class="column is-full" onclick="callisto()">
+  <div class="text small-text">Callisto Media</div>
+</a>
+<a class="column is-full is-active">
+  <div class="selected small-text">Mthree</div>
+</a>
+<a class="column is-full" onclick="mills()"">
+  <div class="text small-text">Mills</div>
+</a>
+{% endif %}
+
+{% endblock klotski_selected %}
+<!--https://bulma.io/documentation/components/menu/-->

@@ -1,0 +1,54 @@
+{% block klotski %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Associate Software Engineer<br>at <a href="https://www.callistomedia.com/" target="_blank">Callisto Media</a>
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Maintained, built, and tested a large repository of in house tools.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Built web-scraping tools to obtain valuable data using rotating proxies and headless browser technology.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Created data visualizations application to warn users of suspicious data using Google Charts.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Helped maintain <u><a href="https://www.callistomedia.com/" target="_blank">callistomedia.com</a></u>
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Associate Software Engineer<br>at <a href="https://www.callistomedia.com/" target="_blank">Callisto Media</a>
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Maintained, built, and tested a large repository of in house tools.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Built web-scraping tools to obtain valuable data using rotating proxies and headless browser technology.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Created data visualizations application to warn users of suspicious data using Google Charts.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Helped maintain <u><a href="https://www.callistomedia.com/" target="_blank">callistomedia.com</a></u>
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock klotski %}

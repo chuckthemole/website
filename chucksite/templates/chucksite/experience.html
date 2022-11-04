@@ -2,83 +2,54 @@
 
 {% load static %}
 
-<!--Experience-->
-
-<script id="find_the_rock" type="text/html">
-  {% block find_the_rock %}
-  {% include "chucksite/experience/rock.html" %}
+<script id="callisto" type="text/html">
+  {% block callisto %}
+  {% include "chucksite/experience/callisto.html" %}
+  {% endblock %}
+</script>
+<script id="callisto_selected" type="text/html">
+  {% block callisto_selected %}
+  {% include "chucksite/experience/callisto_selected.html" %}
   {% endblock %}
 </script>
 
-<script id="rock_selected" type="text/html">
-  {% block rock_selected %}
-  {% include "chucksite/experience/rock_selected.html" %}
+<script id="mthree" type="text/html">
+  {% block mthree %}
+  {% include "chucksite/experience/mthree.html" %}
+  {% endblock %}
+</script>
+<script id="mthree_selected" type="text/html">
+  {% block mthree_selected %}
+  {% include "chucksite/experience/mthree_selected.html" %}
   {% endblock %}
 </script>
 
-<script id="teach_assist" type="text/html">
-  {% block teach_assist %}
-  {% include "chucksite/experience/teach_assist.html" %}
+<script id="mills" type="text/html">
+  {% block mills %}
+  {% include "chucksite/experience/mills.html" %}
   {% endblock %}
 </script>
-
-<script id="teach_assist_selected" type="text/html">
-  {% block teach_assist_selected %}
-  {% include "chucksite/experience/teach_assist_selected.html" %}
-  {% endblock %}
-</script>
-
-<script id="klotski" type="text/html">
-  {% block klotski %}
-  {% include "chucksite/experience/klotski.html" %}
-  {% endblock %}
-</script>
-
-<script id="klotski_selected" type="text/html">
-  {% block klotski_selected %}
-  {% include "chucksite/experience/klotski_selected.html" %}
-  {% endblock %}
-</script>
-
-<script id="skyline" type="text/html">
-  {% block skyline %}
-  {% include "chucksite/experience/skyline.html" %}
-  {% endblock %}
-</script>
-
-<script id="skyline_selected" type="text/html">
-  {% block skyline_selected %}
-  {% include "chucksite/experience/skyline_selected.html" %}
-  {% endblock %}
-</script>
-
-<script id="traveler" type="text/html">
-  {% block traveler %}
-  {% include "chucksite/experience/traveler.html" %}
-  {% endblock %}
-</script>
-
-<script id="traveler_selected" type="text/html">
-  {% block traveler_selected %}
-  {% include "chucksite/experience/traveler_selected.html" %}
+<script id="mills_selected" type="text/html">
+  {% block mills_selected %}
+  {% include "chucksite/experience/mills_selected.html" %}
   {% endblock %}
 </script>
 
 {% if request.user_agent.is_mobile %}
 <div class="columns is-section-mobile is-multiline is-mobile" id="experience">
-  <p class="title column is-full has-text-centered">Projects & Work Experience</p>
+  <p class="title column is-full has-text-centered">Work Experience</p>
   <div class="column is-full">
     <div class="columns is-mobile is-multiline is-variable is-4-mobile is-6-desktop">
       <aside class="menu column is-two-fifth">
         <div class="columns is-vcentered menu-list is-full box alt-background-color" id="selector">
           {% block original_selection_mobile %}
-          {% include "chucksite/experience/teach_assist_selected.html" %}
+          {% include "chucksite/experience/callisto_selected.html" %}
           {% endblock %}
         </div>
       </aside>
       <div class="column is-three-fifths" id="experience_menu">
         {% block teach_assist_on_load_mobile %}
-        {% include "chucksite/experience/teach_assist.html" %}
+        {% include "chucksite/experience/callisto.html" %}
         {% endblock %}
       </div>
     </div>
@@ -86,19 +57,19 @@
 </div>
 {% else %}
 <div class="columns is-section is-multiline" id="experience">
-  <p class="title column is-full has-text-centered">Projects & Work Experience</p>
+  <p class="title column is-full has-text-centered">Work Experience</p>
   <div class="column is-full" style="height: 30vw;">
     <div class="columns is-mobile is-multiline is-variable is-4-mobile is-6-desktop">
       <aside class="menu column is-two-fifth">
         <div class="columns is-vcentered menu-list is-full is-multiline box alt-background-color" id="selector">
           {% block original_selection %}
-          {% include "chucksite/experience/teach_assist_selected.html" %}
+          {% include "chucksite/experience/callisto_selected.html" %}
           {% endblock %}
         </div>
       </aside>
       <div class="column is-three-fifths" id="experience_menu">
         {% block teach_assist_on_load %}
-        {% include "chucksite/experience/teach_assist.html" %}
+        {% include "chucksite/experience/callisto.html" %}
         {% endblock %}
       </div>
     </div>
@@ -107,30 +78,43 @@
 {% endif %}
 
 <script>
-  function teach_assist() {
-    document.getElementById('selector').innerHTML = document.getElementById('teach_assist_selected').innerHTML;
-    document.getElementById('experience_menu').innerHTML = document.getElementById('teach_assist').innerHTML;
+  function callisto() {
+    document.getElementById('selector').innerHTML = document.getElementById('callisto_selected').innerHTML;
+    document.getElementById('experience_menu').innerHTML = document.getElementById('callisto').innerHTML;
+  }
+  function mthree() {
+    document.getElementById('selector').innerHTML = document.getElementById('mthree_selected').innerHTML;
+    document.getElementById('experience_menu').innerHTML = document.getElementById('mthree').innerHTML;
+  }
+  function mills() {
+    document.getElementById('selector').innerHTML = document.getElementById('mills_selected').innerHTML;
+    document.getElementById('experience_menu').innerHTML = document.getElementById('mills').innerHTML;
   }
 
-  function find_the_rock() {
-    document.getElementById('selector').innerHTML = document.getElementById('rock_selected').innerHTML;
-    document.getElementById('experience_menu').innerHTML = document.getElementById('find_the_rock').innerHTML;
-  }
-
-  function klotski() {
-    document.getElementById('selector').innerHTML = document.getElementById('klotski_selected').innerHTML;
-    document.getElementById('experience_menu').innerHTML = document.getElementById('klotski').innerHTML;
-  }
-
-  function traveler() {
-    document.getElementById('selector').innerHTML = document.getElementById('traveler_selected').innerHTML;
-    document.getElementById('experience_menu').innerHTML = document.getElementById('traveler').innerHTML;
-  }
-
-  function skyline() {
-    document.getElementById('selector').innerHTML = document.getElementById('skyline_selected').innerHTML;
-    document.getElementById('experience_menu').innerHTML = document.getElementById('skyline').innerHTML;
-  }
+  // function teach_assist() {
+  //   document.getElementById('selector').innerHTML = document.getElementById('teach_assist_selected').innerHTML;
+  //   document.getElementById('experience_menu').innerHTML = document.getElementById('teach_assist').innerHTML;
+  // }
+  //
+  // function find_the_rock() {
+  //   document.getElementById('selector').innerHTML = document.getElementById('rock_selected').innerHTML;
+  //   document.getElementById('experience_menu').innerHTML = document.getElementById('find_the_rock').innerHTML;
+  // }
+  //
+  // function klotski() {
+  //   document.getElementById('selector').innerHTML = document.getElementById('klotski_selected').innerHTML;
+  //   document.getElementById('experience_menu').innerHTML = document.getElementById('klotski').innerHTML;
+  // }
+  //
+  // function traveler() {
+  //   document.getElementById('selector').innerHTML = document.getElementById('traveler_selected').innerHTML;
+  //   document.getElementById('experience_menu').innerHTML = document.getElementById('traveler').innerHTML;
+  // }
+  //
+  // function skyline() {
+  //   document.getElementById('selector').innerHTML = document.getElementById('skyline_selected').innerHTML;
+  //   document.getElementById('experience_menu').innerHTML = document.getElementById('skyline').innerHTML;
+  // }
 </script>
 
 {% endblock experience %}

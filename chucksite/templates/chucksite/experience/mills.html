@@ -1,0 +1,46 @@
+{% block klotski %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Teaching Assistant<br>at <a href="https://www.mills.edu/" target="_blank">Mills College</a>
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Helped students with a projects in a variety of programming languages (Java, Python, HTML, JavaScript, Ruby).
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Held office hours to debug and consult with students.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Collaborated with students on a software development projects.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Teaching Assistant<br>at <a href="https://www.mills.edu/" target="_blank">Mills College</a>
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Helped students with a projects in a variety of programming languages (Java, Python, HTML, JavaScript, Ruby).
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Held office hours to debug and consult with students.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Collaborated with students on software development projects.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock klotski %}

@@ -1,0 +1,46 @@
+{% block klotski %}
+
+{% if request.user_agent.is_mobile %}
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text-mobile has-text-centered" style="white-space: no-wrap;">
+    Software Engineer Trainee<br>at <a href="https://www.wiley.com/" target="_blank">Mthree (Wiley)</a>
+  </span>
+  <div class="column is-full text small-text-mobile">
+    <li class="wrap bullet_list">
+      Developed Java applications using Spring Boot framework.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Used MySQL as a solution for database challenges, using MySQLWorkbench as an interface.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Deployed web applications in order to present to groups of people.
+    </li>
+  </div>
+</div>
+
+{% else %}
+
+<div class="columns is-multiline fade-in" id="experience_details">
+  <span class="column is-full charles small-text has-text-centered" style="white-space: no-wrap;">
+    Software Engineer Trainee<br>at <a href="https://www.wiley.com/" target="_blank">Mthree (Wiley)</a>
+  </span>
+  <div class="column is-full text small-text">
+    <li class="wrap bullet_list">
+      Developed Java applications using Spring Boot framework.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Used MySQL as a solution for database challenges, using MySQLWorkbench as an interface.
+    </li>
+    <br>
+    <li class="wrap bullet_list">
+      Deployed web applications in order to present to groups of people.
+    </li>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock klotski %}
