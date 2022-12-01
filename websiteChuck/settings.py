@@ -79,20 +79,20 @@ WSGI_APPLICATION = 'websiteChuck.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-DATABASES['default'] = dj_database_url.config(default=config('DB_KEY'))
-# The content of default= '  '   is  found in Heroku app URI, starts with postgres://...
-# allow us to connect locally the DB is Heroku
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         #'ENGINE': 'django.db.backends.sqlite3',
+#         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+#
+# DATABASES['default'] = dj_database_url.config(default=config('DB_KEY'))
+# # The content of default= '  '   is  found in Heroku app URI, starts with postgres://...
+# # allow us to connect locally the DB is Heroku
+#
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
 # try runserver localy now
 # python manage.py runserver
 
