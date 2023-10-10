@@ -1,5 +1,5 @@
 asgiref==3.3.4
-djdatabaseurl==0.5.0
+dj-database-url==2.1.0
 Django==3.2.2
 djangoheroku==0.0.0
 djangouseragents==0.4.0
