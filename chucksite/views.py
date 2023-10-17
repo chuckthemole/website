@@ -7,10 +7,12 @@ from django.contrib.auth.models import User
 import os
 import subprocess
 from django.conf import settings
+import requests
 
 # Create your views here.
 def index(request):
     if request.method == "GET":
+        print("Getting index...")
         return render(request, "chucksite/index.html", {})
     else:
         return HttpResponse(status=500)
@@ -50,4 +52,12 @@ def klotski(request):
     if request.method == "GET":
         return render(request, "chucksite/resume.html", {})
     else:
+        return HttpResponse(status=500)
+
+def footer(request):
+    if request.method == "GET":
+        response = requests.get('localhost:8001/view/footer')
+        return response.json()
+    else:
+        print('Error: footer view called with non-GET request')
         return HttpResponse(status=500)

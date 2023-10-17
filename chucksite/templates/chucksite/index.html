@@ -1,92 +1,19 @@
-{% extends "chucksite/base.html" %}
-
-{% block content %}
-
 {% load static %}
 
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charles Pikaart Thomas</title>
+    <link rel="stylesheet" href="{% static 'chucksite/css/chuck-styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'chucksite/css/main.css' %}" />
+    <!-- <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css"> -->
 </head>
 
-{% if not request.user_agent.is_mobile %}
-<div style="margin-bottom: 3cm;"></div>
-{% endif %}
+<body class="m-0">
+    <div id="root"></div>
+    <script src="{% static 'chucksite/js/quill.bundle.js' %}"></script> <!-- keep this at bottom of body -->
+    <script src="{% static 'chucksite/js/app.bundle.js' %}"></script> <!-- keep this at bottom of body -->
+</body>
 
-{% if not request.user_agent.is_mobile %}
-<div class="is-section">
-  {% block intro %}
-  {% include "chucksite/introduction.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section">
-  {% block about %}
-  {% include "chucksite/about.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section">
-  {% block experience %}
-  {% include "chucksite/experience.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section">
-  {% block projects %}
-  {% include "chucksite/projects.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section">
-  {% block contact %}
-  {% include "chucksite/contact.html" %}
-  {% endblock %}
-</div>
-
-<div style="margin-bottom: -6cm;">
-  {% block cats %}
-  {% include "chucksite/cats.html" %}
-  {% endblock %}
-</div>
-
-{% else %}
-
-<div class="is-section-mobile-intro">
-  {% block intro_mobile %}
-  {% include "chucksite/introduction.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section-mobile">
-  {% block about_mobile %}
-  {% include "chucksite/about.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section-mobile">
-  {% block experience_mobile %}
-  {% include "chucksite/experience.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section-mobile">
-  {% block projects_mobile %}
-  {% include "chucksite/projects.html" %}
-  {% endblock %}
-</div>
-
-<div class="is-section-mobile">
-  {% block contact_mobile %}
-  {% include "chucksite/contact.html" %}
-  {% endblock %}
-</div>
-
-<div style="margin-bottom: -6cm;">
-  {% block cats_mobile %}
-  {% include "chucksite/cats.html" %}
-  {% endblock %}
-</div>
-
-{% endif %}
-
-{% endblock content %}
+</html>

@@ -9,4 +9,7 @@ urlpatterns = [
     path('projects', views.projects, name='projects'),
     path('download', views.download, name='download'),
     path('klotski', views.klotski, name='klotski'),
+
+    # views
+    path('view/footer', views.footer, name='footer'),
 ]

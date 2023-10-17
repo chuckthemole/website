@@ -1,0 +1,22 @@
+import * as React from 'react';
+import { Outlet } from 'react-router-dom';
+
+import Footer from './common/footer';
+import Header from './common/header';
+
+export default function App() {
+
+    return (
+        <>
+            <Header />
+            <div className='columns is-centered'>
+                <div className='column'></div>
+                <div className='column is-three-fifths'>
+                    <Outlet />
+                </div>
+                <div className='column'></div>
+            </div>
+            <Footer footer_path={"http://localhost:801/view/footer"}/>
+        </>
+    )
+}

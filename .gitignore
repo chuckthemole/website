@@ -1,3 +1,13 @@
 *pycache*
 /djangoenv
 .env
+package-lock.json
+node/
+node_modules/
+
+### maybe ignore all static once files hosted?
+chucksite/static/chucksite/js/*
+chucksite/static/chucksite/css/chuck-styles.css
+chucksite/js/common
+chucksite/static/chucksite/css/chuck-styles.css
+chucksite/static/chucksite/bulma-0.8.0
