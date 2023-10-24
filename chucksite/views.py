@@ -6,8 +6,10 @@ from django.contrib.auth.models import User
 #from chucksite.models import Script
 import os
 import subprocess
-from django.conf import settings
+from django.conf import Settings
+from django.http import JsonResponse
 import requests
+from decouple import config
 
 # Create your views here.
 def index(request):
@@ -56,8 +58,18 @@ def klotski(request):
 
 def footer(request):
     if request.method == "GET":
-        response = requests.get('localhost:8001/view/footer')
-        return response.json()
+        print('Getting footer...')
+        uri = config('RUMPUS_URI') + '/charles_pikaart_thomas/view/footer'
+        print(uri)
+        try:
+            response = requests.get(uri)
+        except:
+            print('Error: footer view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        if response.status_code != 200:
+            print('Error: footer view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        return JsonResponse(response.json())
     else:
         print('Error: footer view called with non-GET request')
         return HttpResponse(status=500)
