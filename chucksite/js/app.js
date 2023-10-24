@@ -16,7 +16,7 @@ export default function App() {
                 </div>
                 <div className='column'></div>
             </div>
-            <Footer footer_path={"http://localhost:801/view/footer"}/>
+            <Footer footer_path={"http://localhost:8081/charles_pikaart_thomas/view/footer"}/>
         </>
     )
 }
