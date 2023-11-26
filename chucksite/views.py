@@ -73,3 +73,21 @@ def footer(request):
     else:
         print('Error: footer view called with non-GET request')
         return HttpResponse(status=500)
+
+def header(request):
+    if request.method == "GET":
+        print('Getting header...')
+        uri = config('RUMPUS_URI') + '/charles_pikaart_thomas/view/header'
+        print(uri)
+        try:
+            response = requests.get(uri)
+        except:
+            print('Error: header view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        if response.status_code != 200:
+            print('Error: header view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        return JsonResponse(response.json())
+    else:
+        print('Error: header view called with non-GET request')
+        return HttpResponse(status=500)

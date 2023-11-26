@@ -12,4 +12,5 @@ urlpatterns = [
 
     # views
     path('view/footer', views.footer, name='footer'),
+    path('view/header', views.header, name='header'),
 ]
