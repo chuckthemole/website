@@ -91,3 +91,25 @@ def header(request):
     else:
         print('Error: header view called with non-GET request')
         return HttpResponse(status=500)
+
+def landing_body(request):
+    if request.method == "GET":
+        print('Getting landing body...')
+        uri = config('RUMPUS_URI') + '/charles_pikaart_thomas/view/landing_page_body'
+        print(uri)
+        try:
+            response = requests.get(uri)
+        except:
+            print('Error: landing body view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        if response.status_code != 200:
+            print('Error: landing body view failed to connect to rumpus')
+            return JsonResponse(status=400)
+        print(response.status_code)
+        print(response.content)
+        print(response.text)
+        print(response.json())
+        return JsonResponse(response.json())
+    else:
+        print('Error: landing body view called with non-GET request')
+        return HttpResponse(status=500)
